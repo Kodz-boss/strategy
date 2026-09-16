@@ -1,6 +1,12 @@
 # Country Requirements Knowledge Base
 
-Personal HTML/CSS/JS notes for company setup across **54 African countries + Canada + United States** (same coverage as the auth-service location catalog).
+Personal HTML/CSS/JS notes for company setup in the **14 markets we cover**.
+
+## Coverage (14)
+
+**Africa (12):** Angola, Egypt, Equatorial Guinea, Ghana, Kenya, Madagascar, Namibia, Nigeria, South Africa, Tanzania, Zambia, Zimbabwe
+
+**North America (2):** Canada, United States
 
 ## Open the site
 
@@ -36,7 +42,7 @@ Country pages: `country.html?c=nigeria` (slug = lowercase name, accents stripped
 
 ## Regenerate draft data (optional)
 
-If you want to rebuild the draft file from templates (this **overwrites** `js/data.js`):
+If you want to rebuild the draft file from the generator (this **overwrites** `js/data.js`):
 
 ```bash
 node tools/generate-data.js

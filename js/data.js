@@ -1,1008 +1,158 @@
-/** Auto-shaped draft data — edit freely; verify before relying on fees. */
+/** Covered markets only (14) — draft estimates; edit freely and verify fees. */
 window.COUNTRIES = [
-  {
-    "slug": "algeria",
-    "name": "Algeria",
-    "region": "Africa",
-    "currency": "DZD",
-    "regulator": "CNRC (Centre National du Registre de Commerce)",
-    "entities": [
-      {
-        "type": "Société à Responsabilité Limitée (SARL)",
-        "localName": "Private limited equivalent",
-        "requirements": [
-          "Name clearance",
-          "Articles / statutes (often Arabic + French)",
-          "Managers / partners IDs",
-          "Registered office",
-          "Commercial registry filing",
-          "Tax and social registrations after incorporation"
-        ],
-        "costs": [
-          {
-            "item": "Registry + stamp duties",
-            "amount": "Varies (DZD)",
-            "note": "Confirm current schedule"
-          },
-          {
-            "item": "Legal / notary",
-            "amount": "Often significant",
-            "note": "Market rates"
-          }
-        ],
-        "timeline": "1–4 weeks"
-      },
-      {
-        "type": "Sole Proprietorship",
-        "localName": "Personne physique / auto-entrepreneur where available",
-        "requirements": [
-          "Trader / auto-entrepreneur registration if applicable",
-          "National ID and tax file"
-        ],
-        "costs": [
-          {
-            "item": "Registration",
-            "amount": "Usually lower (DZD)",
-            "note": "Draft"
-          }
-        ],
-        "timeline": "Days to a few weeks"
-      }
-    ],
-    "notes": "Draft — verify with CNRC (Centre National du Registre de Commerce) and local counsel. Fees and document lists change."
-  },
   {
     "slug": "angola",
     "name": "Angola",
     "region": "Africa",
     "currency": "AOA",
-    "regulator": "Guiché Único da Empresa / Conservatória",
+    "regulator": "Guiché Único da Empresa / Conservatória do Registo Comercial",
     "entities": [
       {
         "type": "Sociedade por Quotas",
         "localName": "Lda (private limited equivalent)",
         "requirements": [
-          "Company name certificate",
-          "Pacto social (articles)",
-          "Quota holders and managers IDs",
-          "Registered seat in-country",
-          "Commercial registry / one-stop shop filing",
-          "NIF / tax number after or during setup"
+          "Company name certificate from Ficheiro Central de Denominações",
+          "Pacto social (articles) — often notarised",
+          "Quota holders and managers with IDs / passports",
+          "Registered seat (sede) in Angola",
+          "Filing at Guiché Único da Empresa / Conservatória",
+          "NIF (tax number) for the company and often partners",
+          "Bank capital deposit evidence where required"
         ],
         "costs": [
           {
-            "item": "Registry / one-stop fees",
-            "amount": "Moderate official fees (AOA)",
-            "note": "Confirm locally"
+            "item": "Name certificate + registry fees",
+            "amount": "≈ AOA 50,000–250,000",
+            "note": "Confirm current Guiché Único schedule"
           },
           {
-            "item": "Lawyer / notary",
-            "amount": "Often the main cost",
-            "note": "Market rates"
-          }
-        ],
-        "timeline": "1–4 weeks typical"
-      },
-      {
-        "type": "Empresário em Nome Individual",
-        "localName": "Sole trader",
-        "requirements": [
-          "Individual trader registration",
-          "ID and address",
-          "Tax registration"
-        ],
-        "costs": [
-          {
-            "item": "Registration",
-            "amount": "Lower than Lda (AOA)",
-            "note": "Draft"
-          }
-        ],
-        "timeline": "Days to 2 weeks"
-      }
-    ],
-    "notes": "Draft — verify with Guiché Único da Empresa / Conservatória and local counsel. Fees and document lists change."
-  },
-  {
-    "slug": "benin",
-    "name": "Benin",
-    "region": "Africa",
-    "currency": "XOF",
-    "regulator": "APIEx / RCCM",
-    "entities": [
-      {
-        "type": "Société à Responsabilité Limitée",
-        "localName": "SARL (private limited equivalent)",
-        "requirements": [
-          "Company name and objects",
-          "Statutes (articles) under OHADA Uniform Act",
-          "At least 1 shareholder (confirm local practice)",
-          "Manager (gérant) particulars",
-          "Registered office in the country",
-          "Deposit of share capital in a local bank (rules vary)",
-          "RCCM registration via Guichet Unique / CFE where available",
-          "Notarisation of statutes often required"
-        ],
-        "costs": [
-          {
-            "item": "RCCM / guichet unique fees",
-            "amount": "≈ 25,000–150,000 XOF",
-            "note": "Wide variance by country"
-          },
-          {
-            "item": "Notary / legal fees",
-            "amount": "≈ 100,000–500,000 XOF",
+            "item": "Notary / lawyer package",
+            "amount": "≈ AOA 200,000–1,000,000+",
             "note": "Often the larger cost"
           },
           {
-            "item": "Capital deposit",
-            "amount": "Per statutes",
-            "note": "Minimum capital rules eased in many OHADA states — confirm locally"
+            "item": "Professional / agent fees",
+            "amount": "USD 500–2,000 equivalent common",
+            "note": "Market rates for foreign clients"
           }
         ],
-        "timeline": "Often 3–21 business days if file is complete"
+        "timeline": "Often 1–4 weeks if documents and NIF steps are complete"
       },
       {
-        "type": "Société Anonyme",
-        "localName": "SA (public limited equivalent)",
+        "type": "Sociedade Anónima",
+        "localName": "SA",
         "requirements": [
-          "Higher governance (board) requirements",
-          "Statutes and capital suited to SA form",
-          "RCCM registration",
-          "Notary involvement typical"
+          "Higher capital and governance than Lda",
+          "Pacto social suited to SA form",
+          "Board / statutory bodies as required",
+          "Commercial registry filing"
         ],
         "costs": [
           {
             "item": "Legal + registry package",
-            "amount": "Higher than SARL",
+            "amount": "Higher than Lda",
             "note": "Use local counsel"
           }
         ],
         "timeline": "Several weeks"
       },
       {
-        "type": "Entreprise Individuelle",
-        "localName": "Sole trader / business name",
+        "type": "Empresário em Nome Individual",
+        "localName": "Sole trader",
         "requirements": [
-          "Trader registration / RCCM as applicable",
-          "National ID and address",
-          "Tax identification after registration"
+          "Individual trader registration",
+          "National ID / passport and address",
+          "NIF and activity licensing as applicable"
         ],
         "costs": [
           {
             "item": "Registration",
-            "amount": "≈ 10,000–75,000 XOF",
-            "note": "Draft"
+            "amount": "Lower than Lda",
+            "note": "Draft — confirm Guiché Único"
           }
         ],
-        "timeline": "A few days to 2 weeks"
+        "timeline": "Days to 2 weeks"
       }
     ],
-    "notes": "Draft — verify with APIEx / RCCM and local counsel. Fees and document lists change."
+    "notes": "Draft — Portuguese documentation is standard. Foreign investment may need additional AIPEX / sector steps — verify locally."
   },
   {
-    "slug": "botswana",
-    "name": "Botswana",
-    "region": "Africa",
-    "currency": "BWP",
-    "regulator": "CIPA (Companies and Intellectual Property Authority)",
+    "slug": "canada",
+    "name": "Canada",
+    "region": "North America",
+    "currency": "CAD",
+    "regulator": "Corporations Canada (federal) / provincial registries",
     "entities": [
       {
-        "type": "Private Company Limited by Shares",
-        "localName": "Pty Ltd style",
+        "type": "Federal Corporation",
+        "localName": "Canada Business Corporations Act (CBCA)",
         "requirements": [
-          "Name reservation with companies registry",
-          "Constitution / memorandum & articles",
-          "Director(s) and shareholder particulars + IDs",
-          "Registered office in-country",
-          "Statement of share capital",
-          "Beneficial ownership disclosure where required"
+          "NUANS name search (or numbered company)",
+          "Articles of Incorporation",
+          "At least 1 director (25% Canadian resident rule may apply — confirm current CBCA)",
+          "Registered office in Canada",
+          "Individuals with significant control (ISC) register"
         ],
         "costs": [
           {
-            "item": "CIPA filing",
-            "amount": "≈ BWP 300–1,200",
-            "note": "Confirm CIPA"
+            "item": "Corporations Canada filing",
+            "amount": "≈ CAD 200 (online) / 250+ paper",
+            "note": "Confirm current fees"
+          },
+          {
+            "item": "NUANS search",
+            "amount": "≈ CAD 20–50",
+            "note": "If named corp"
+          },
+          {
+            "item": "Legal / registered agent extras",
+            "amount": "≈ CAD 300–1,500+",
+            "note": "Optional packages"
+          }
+        ],
+        "timeline": "Often same day online"
+      },
+      {
+        "type": "Provincial / Territorial Corporation",
+        "localName": "e.g. Ontario, BC, Alberta corp",
+        "requirements": [
+          "Articles under provincial statute",
+          "Name search rules vary by province",
+          "Director / address requirements per province",
+          "Extra-provincial registration if operating in other provinces"
+        ],
+        "costs": [
+          {
+            "item": "Provincial filing",
+            "amount": "≈ CAD 100–400",
+            "note": "Varies by province"
           },
           {
             "item": "Professional fees",
-            "amount": "≈ BWP 1,500–8,000",
-            "note": "Market"
-          }
-        ],
-        "timeline": "Several days to 3 weeks typical"
-      },
-      {
-        "type": "Business Name / Sole Proprietorship",
-        "localName": "Enterprise",
-        "requirements": [
-          "Business name approval",
-          "Proprietor ID and address",
-          "Nature of business"
-        ],
-        "costs": [
-          {
-            "item": "Registration",
-            "amount": "Lower than company filing (BWP)",
-            "note": "Draft"
-          }
-        ],
-        "timeline": "A few days"
-      }
-    ],
-    "notes": "Draft — verify with CIPA (Companies and Intellectual Property Authority) and local counsel. Fees and document lists change."
-  },
-  {
-    "slug": "burkina-faso",
-    "name": "Burkina Faso",
-    "region": "Africa",
-    "currency": "XOF",
-    "regulator": "CEFORE / RCCM",
-    "entities": [
-      {
-        "type": "Société à Responsabilité Limitée",
-        "localName": "SARL (private limited equivalent)",
-        "requirements": [
-          "Company name and objects",
-          "Statutes (articles) under OHADA Uniform Act",
-          "At least 1 shareholder (confirm local practice)",
-          "Manager (gérant) particulars",
-          "Registered office in the country",
-          "Deposit of share capital in a local bank (rules vary)",
-          "RCCM registration via Guichet Unique / CFE where available",
-          "Notarisation of statutes often required"
-        ],
-        "costs": [
-          {
-            "item": "RCCM / guichet unique fees",
-            "amount": "≈ 25,000–150,000 XOF",
-            "note": "Wide variance by country"
-          },
-          {
-            "item": "Notary / legal fees",
-            "amount": "≈ 100,000–500,000 XOF",
-            "note": "Often the larger cost"
-          },
-          {
-            "item": "Capital deposit",
-            "amount": "Per statutes",
-            "note": "Minimum capital rules eased in many OHADA states — confirm locally"
-          }
-        ],
-        "timeline": "Often 3–21 business days if file is complete"
-      },
-      {
-        "type": "Société Anonyme",
-        "localName": "SA (public limited equivalent)",
-        "requirements": [
-          "Higher governance (board) requirements",
-          "Statutes and capital suited to SA form",
-          "RCCM registration",
-          "Notary involvement typical"
-        ],
-        "costs": [
-          {
-            "item": "Legal + registry package",
-            "amount": "Higher than SARL",
-            "note": "Use local counsel"
-          }
-        ],
-        "timeline": "Several weeks"
-      },
-      {
-        "type": "Entreprise Individuelle",
-        "localName": "Sole trader / business name",
-        "requirements": [
-          "Trader registration / RCCM as applicable",
-          "National ID and address",
-          "Tax identification after registration"
-        ],
-        "costs": [
-          {
-            "item": "Registration",
-            "amount": "≈ 10,000–75,000 XOF",
-            "note": "Draft"
-          }
-        ],
-        "timeline": "A few days to 2 weeks"
-      }
-    ],
-    "notes": "Draft — verify with CEFORE / RCCM and local counsel. Fees and document lists change."
-  },
-  {
-    "slug": "burundi",
-    "name": "Burundi",
-    "region": "Africa",
-    "currency": "BIF",
-    "regulator": "API / Commercial Registry",
-    "entities": [
-      {
-        "type": "Private Limited Company",
-        "localName": "Ltd / Pty-style company",
-        "requirements": [
-          "Name reservation with companies registry",
-          "Constitution / memorandum & articles",
-          "Director(s) and shareholder particulars + IDs",
-          "Registered office in-country",
-          "Statement of share capital",
-          "Beneficial ownership disclosure where required"
-        ],
-        "costs": [
-          {
-            "item": "Registry filing",
-            "amount": "Approx. low–moderate official fees in BIF",
-            "note": "Confirm current tariff"
-          },
-          {
-            "item": "Professional / agent fees",
-            "amount": "Often several times the official fee",
+            "amount": "≈ CAD 300–2,000",
             "note": "Market rates"
           }
         ],
-        "timeline": "Several days to 3 weeks typical"
+        "timeline": "Same day to a few days"
       },
       {
-        "type": "Business Name / Sole Proprietorship",
-        "localName": "Enterprise",
+        "type": "Sole Proprietorship",
+        "localName": "Business name registration",
         "requirements": [
-          "Business name approval",
-          "Proprietor ID and address",
-          "Nature of business"
+          "May register trade name with province if not using legal name",
+          "Business number / CRA tax accounts as needed"
         ],
         "costs": [
           {
-            "item": "Registration",
-            "amount": "Lower than company filing (BIF)",
-            "note": "Draft"
+            "item": "Provincial name registration",
+            "amount": "≈ CAD 0–100+",
+            "note": "Province-specific"
           }
         ],
-        "timeline": "A few days"
+        "timeline": "Same day to a week"
       }
     ],
-    "notes": "Draft — verify with API / Commercial Registry and local counsel. Fees and document lists change."
-  },
-  {
-    "slug": "cabo-verde",
-    "name": "Cabo Verde",
-    "region": "Africa",
-    "currency": "CVE",
-    "regulator": "Casa do Cidadão / Commercial Registry",
-    "entities": [
-      {
-        "type": "Sociedade por Quotas",
-        "localName": "Lda (private limited equivalent)",
-        "requirements": [
-          "Company name certificate",
-          "Pacto social (articles)",
-          "Quota holders and managers IDs",
-          "Registered seat in-country",
-          "Commercial registry / one-stop shop filing",
-          "NIF / tax number after or during setup"
-        ],
-        "costs": [
-          {
-            "item": "Registry / one-stop fees",
-            "amount": "Moderate official fees (CVE)",
-            "note": "Confirm locally"
-          },
-          {
-            "item": "Lawyer / notary",
-            "amount": "Often the main cost",
-            "note": "Market rates"
-          }
-        ],
-        "timeline": "1–4 weeks typical"
-      },
-      {
-        "type": "Empresário em Nome Individual",
-        "localName": "Sole trader",
-        "requirements": [
-          "Individual trader registration",
-          "ID and address",
-          "Tax registration"
-        ],
-        "costs": [
-          {
-            "item": "Registration",
-            "amount": "Lower than Lda (CVE)",
-            "note": "Draft"
-          }
-        ],
-        "timeline": "Days to 2 weeks"
-      }
-    ],
-    "notes": "Draft — verify with Casa do Cidadão / Commercial Registry and local counsel. Fees and document lists change."
-  },
-  {
-    "slug": "cameroon",
-    "name": "Cameroon",
-    "region": "Africa",
-    "currency": "XAF",
-    "regulator": "RCCM / Guichet Unique",
-    "entities": [
-      {
-        "type": "Société à Responsabilité Limitée",
-        "localName": "SARL (private limited equivalent)",
-        "requirements": [
-          "Company name and objects",
-          "Statutes (articles) under OHADA Uniform Act",
-          "At least 1 shareholder (confirm local practice)",
-          "Manager (gérant) particulars",
-          "Registered office in the country",
-          "Deposit of share capital in a local bank (rules vary)",
-          "RCCM registration via Guichet Unique / CFE where available",
-          "Notarisation of statutes often required"
-        ],
-        "costs": [
-          {
-            "item": "RCCM / guichet unique fees",
-            "amount": "≈ 25,000–150,000 XAF",
-            "note": "Wide variance by country"
-          },
-          {
-            "item": "Notary / legal fees",
-            "amount": "≈ 100,000–500,000 XAF",
-            "note": "Often the larger cost"
-          },
-          {
-            "item": "Capital deposit",
-            "amount": "Per statutes",
-            "note": "Minimum capital rules eased in many OHADA states — confirm locally"
-          }
-        ],
-        "timeline": "Often 3–21 business days if file is complete"
-      },
-      {
-        "type": "Société Anonyme",
-        "localName": "SA (public limited equivalent)",
-        "requirements": [
-          "Higher governance (board) requirements",
-          "Statutes and capital suited to SA form",
-          "RCCM registration",
-          "Notary involvement typical"
-        ],
-        "costs": [
-          {
-            "item": "Legal + registry package",
-            "amount": "Higher than SARL",
-            "note": "Use local counsel"
-          }
-        ],
-        "timeline": "Several weeks"
-      },
-      {
-        "type": "Entreprise Individuelle",
-        "localName": "Sole trader / business name",
-        "requirements": [
-          "Trader registration / RCCM as applicable",
-          "National ID and address",
-          "Tax identification after registration"
-        ],
-        "costs": [
-          {
-            "item": "Registration",
-            "amount": "≈ 10,000–75,000 XAF",
-            "note": "Draft"
-          }
-        ],
-        "timeline": "A few days to 2 weeks"
-      }
-    ],
-    "notes": "Draft — verify with RCCM / Guichet Unique and local counsel. Fees and document lists change."
-  },
-  {
-    "slug": "central-african-republic",
-    "name": "Central African Republic",
-    "region": "Africa",
-    "currency": "XAF",
-    "regulator": "RCCM / Guichet Unique",
-    "entities": [
-      {
-        "type": "Société à Responsabilité Limitée",
-        "localName": "SARL (private limited equivalent)",
-        "requirements": [
-          "Company name and objects",
-          "Statutes (articles) under OHADA Uniform Act",
-          "At least 1 shareholder (confirm local practice)",
-          "Manager (gérant) particulars",
-          "Registered office in the country",
-          "Deposit of share capital in a local bank (rules vary)",
-          "RCCM registration via Guichet Unique / CFE where available",
-          "Notarisation of statutes often required"
-        ],
-        "costs": [
-          {
-            "item": "RCCM / guichet unique fees",
-            "amount": "≈ 25,000–150,000 XAF",
-            "note": "Wide variance by country"
-          },
-          {
-            "item": "Notary / legal fees",
-            "amount": "≈ 100,000–500,000 XAF",
-            "note": "Often the larger cost"
-          },
-          {
-            "item": "Capital deposit",
-            "amount": "Per statutes",
-            "note": "Minimum capital rules eased in many OHADA states — confirm locally"
-          }
-        ],
-        "timeline": "Often 3–21 business days if file is complete"
-      },
-      {
-        "type": "Société Anonyme",
-        "localName": "SA (public limited equivalent)",
-        "requirements": [
-          "Higher governance (board) requirements",
-          "Statutes and capital suited to SA form",
-          "RCCM registration",
-          "Notary involvement typical"
-        ],
-        "costs": [
-          {
-            "item": "Legal + registry package",
-            "amount": "Higher than SARL",
-            "note": "Use local counsel"
-          }
-        ],
-        "timeline": "Several weeks"
-      },
-      {
-        "type": "Entreprise Individuelle",
-        "localName": "Sole trader / business name",
-        "requirements": [
-          "Trader registration / RCCM as applicable",
-          "National ID and address",
-          "Tax identification after registration"
-        ],
-        "costs": [
-          {
-            "item": "Registration",
-            "amount": "≈ 10,000–75,000 XAF",
-            "note": "Draft"
-          }
-        ],
-        "timeline": "A few days to 2 weeks"
-      }
-    ],
-    "notes": "Draft — verify with RCCM / Guichet Unique and local counsel. Fees and document lists change."
-  },
-  {
-    "slug": "chad",
-    "name": "Chad",
-    "region": "Africa",
-    "currency": "XAF",
-    "regulator": "ANIE / RCCM",
-    "entities": [
-      {
-        "type": "Société à Responsabilité Limitée",
-        "localName": "SARL (private limited equivalent)",
-        "requirements": [
-          "Company name and objects",
-          "Statutes (articles) under OHADA Uniform Act",
-          "At least 1 shareholder (confirm local practice)",
-          "Manager (gérant) particulars",
-          "Registered office in the country",
-          "Deposit of share capital in a local bank (rules vary)",
-          "RCCM registration via Guichet Unique / CFE where available",
-          "Notarisation of statutes often required"
-        ],
-        "costs": [
-          {
-            "item": "RCCM / guichet unique fees",
-            "amount": "≈ 25,000–150,000 XAF",
-            "note": "Wide variance by country"
-          },
-          {
-            "item": "Notary / legal fees",
-            "amount": "≈ 100,000–500,000 XAF",
-            "note": "Often the larger cost"
-          },
-          {
-            "item": "Capital deposit",
-            "amount": "Per statutes",
-            "note": "Minimum capital rules eased in many OHADA states — confirm locally"
-          }
-        ],
-        "timeline": "Often 3–21 business days if file is complete"
-      },
-      {
-        "type": "Société Anonyme",
-        "localName": "SA (public limited equivalent)",
-        "requirements": [
-          "Higher governance (board) requirements",
-          "Statutes and capital suited to SA form",
-          "RCCM registration",
-          "Notary involvement typical"
-        ],
-        "costs": [
-          {
-            "item": "Legal + registry package",
-            "amount": "Higher than SARL",
-            "note": "Use local counsel"
-          }
-        ],
-        "timeline": "Several weeks"
-      },
-      {
-        "type": "Entreprise Individuelle",
-        "localName": "Sole trader / business name",
-        "requirements": [
-          "Trader registration / RCCM as applicable",
-          "National ID and address",
-          "Tax identification after registration"
-        ],
-        "costs": [
-          {
-            "item": "Registration",
-            "amount": "≈ 10,000–75,000 XAF",
-            "note": "Draft"
-          }
-        ],
-        "timeline": "A few days to 2 weeks"
-      }
-    ],
-    "notes": "Draft — verify with ANIE / RCCM and local counsel. Fees and document lists change."
-  },
-  {
-    "slug": "comoros",
-    "name": "Comoros",
-    "region": "Africa",
-    "currency": "KMF",
-    "regulator": "Commercial Registry",
-    "entities": [
-      {
-        "type": "Société à Responsabilité Limitée",
-        "localName": "SARL (private limited equivalent)",
-        "requirements": [
-          "Company name and objects",
-          "Statutes (articles) under OHADA Uniform Act",
-          "At least 1 shareholder (confirm local practice)",
-          "Manager (gérant) particulars",
-          "Registered office in the country",
-          "Deposit of share capital in a local bank (rules vary)",
-          "RCCM registration via Guichet Unique / CFE where available",
-          "Notarisation of statutes often required"
-        ],
-        "costs": [
-          {
-            "item": "RCCM / guichet unique fees",
-            "amount": "≈ 25,000–150,000 KMF",
-            "note": "Wide variance by country"
-          },
-          {
-            "item": "Notary / legal fees",
-            "amount": "≈ 100,000–500,000 KMF",
-            "note": "Often the larger cost"
-          },
-          {
-            "item": "Capital deposit",
-            "amount": "Per statutes",
-            "note": "Minimum capital rules eased in many OHADA states — confirm locally"
-          }
-        ],
-        "timeline": "Often 3–21 business days if file is complete"
-      },
-      {
-        "type": "Société Anonyme",
-        "localName": "SA (public limited equivalent)",
-        "requirements": [
-          "Higher governance (board) requirements",
-          "Statutes and capital suited to SA form",
-          "RCCM registration",
-          "Notary involvement typical"
-        ],
-        "costs": [
-          {
-            "item": "Legal + registry package",
-            "amount": "Higher than SARL",
-            "note": "Use local counsel"
-          }
-        ],
-        "timeline": "Several weeks"
-      },
-      {
-        "type": "Entreprise Individuelle",
-        "localName": "Sole trader / business name",
-        "requirements": [
-          "Trader registration / RCCM as applicable",
-          "National ID and address",
-          "Tax identification after registration"
-        ],
-        "costs": [
-          {
-            "item": "Registration",
-            "amount": "≈ 10,000–75,000 KMF",
-            "note": "Draft"
-          }
-        ],
-        "timeline": "A few days to 2 weeks"
-      }
-    ],
-    "notes": "Draft — verify with Commercial Registry and local counsel. Fees and document lists change."
-  },
-  {
-    "slug": "congo",
-    "name": "Congo",
-    "region": "Africa",
-    "currency": "XAF",
-    "regulator": "ACPCE / RCCM",
-    "entities": [
-      {
-        "type": "Société à Responsabilité Limitée",
-        "localName": "SARL (private limited equivalent)",
-        "requirements": [
-          "Company name and objects",
-          "Statutes (articles) under OHADA Uniform Act",
-          "At least 1 shareholder (confirm local practice)",
-          "Manager (gérant) particulars",
-          "Registered office in the country",
-          "Deposit of share capital in a local bank (rules vary)",
-          "RCCM registration via Guichet Unique / CFE where available",
-          "Notarisation of statutes often required"
-        ],
-        "costs": [
-          {
-            "item": "RCCM / guichet unique fees",
-            "amount": "≈ 25,000–150,000 XAF",
-            "note": "Wide variance by country"
-          },
-          {
-            "item": "Notary / legal fees",
-            "amount": "≈ 100,000–500,000 XAF",
-            "note": "Often the larger cost"
-          },
-          {
-            "item": "Capital deposit",
-            "amount": "Per statutes",
-            "note": "Minimum capital rules eased in many OHADA states — confirm locally"
-          }
-        ],
-        "timeline": "Often 3–21 business days if file is complete"
-      },
-      {
-        "type": "Société Anonyme",
-        "localName": "SA (public limited equivalent)",
-        "requirements": [
-          "Higher governance (board) requirements",
-          "Statutes and capital suited to SA form",
-          "RCCM registration",
-          "Notary involvement typical"
-        ],
-        "costs": [
-          {
-            "item": "Legal + registry package",
-            "amount": "Higher than SARL",
-            "note": "Use local counsel"
-          }
-        ],
-        "timeline": "Several weeks"
-      },
-      {
-        "type": "Entreprise Individuelle",
-        "localName": "Sole trader / business name",
-        "requirements": [
-          "Trader registration / RCCM as applicable",
-          "National ID and address",
-          "Tax identification after registration"
-        ],
-        "costs": [
-          {
-            "item": "Registration",
-            "amount": "≈ 10,000–75,000 XAF",
-            "note": "Draft"
-          }
-        ],
-        "timeline": "A few days to 2 weeks"
-      }
-    ],
-    "notes": "Draft — verify with ACPCE / RCCM and local counsel. Fees and document lists change."
-  },
-  {
-    "slug": "cote-d-ivoire",
-    "name": "Côte d'Ivoire",
-    "region": "Africa",
-    "currency": "XOF",
-    "regulator": "CEPICI / RCCM",
-    "entities": [
-      {
-        "type": "Société à Responsabilité Limitée",
-        "localName": "SARL (private limited equivalent)",
-        "requirements": [
-          "Company name and objects",
-          "Statutes (articles) under OHADA Uniform Act",
-          "At least 1 shareholder (confirm local practice)",
-          "Manager (gérant) particulars",
-          "Registered office in the country",
-          "Deposit of share capital in a local bank (rules vary)",
-          "RCCM registration via Guichet Unique / CFE where available",
-          "Notarisation of statutes often required"
-        ],
-        "costs": [
-          {
-            "item": "RCCM / guichet unique fees",
-            "amount": "≈ 25,000–150,000 XOF",
-            "note": "Wide variance by country"
-          },
-          {
-            "item": "Notary / legal fees",
-            "amount": "≈ 100,000–500,000 XOF",
-            "note": "Often the larger cost"
-          },
-          {
-            "item": "Capital deposit",
-            "amount": "Per statutes",
-            "note": "Minimum capital rules eased in many OHADA states — confirm locally"
-          }
-        ],
-        "timeline": "Often 3–21 business days if file is complete"
-      },
-      {
-        "type": "Société Anonyme",
-        "localName": "SA (public limited equivalent)",
-        "requirements": [
-          "Higher governance (board) requirements",
-          "Statutes and capital suited to SA form",
-          "RCCM registration",
-          "Notary involvement typical"
-        ],
-        "costs": [
-          {
-            "item": "Legal + registry package",
-            "amount": "Higher than SARL",
-            "note": "Use local counsel"
-          }
-        ],
-        "timeline": "Several weeks"
-      },
-      {
-        "type": "Entreprise Individuelle",
-        "localName": "Sole trader / business name",
-        "requirements": [
-          "Trader registration / RCCM as applicable",
-          "National ID and address",
-          "Tax identification after registration"
-        ],
-        "costs": [
-          {
-            "item": "Registration",
-            "amount": "≈ 10,000–75,000 XOF",
-            "note": "Draft"
-          }
-        ],
-        "timeline": "A few days to 2 weeks"
-      }
-    ],
-    "notes": "Draft — verify with CEPICI / RCCM and local counsel. Fees and document lists change."
-  },
-  {
-    "slug": "democratic-republic-of-the-congo",
-    "name": "Democratic Republic of the Congo",
-    "region": "Africa",
-    "currency": "CDF",
-    "regulator": "Guichet Unique de Création d'Entreprise / RCCM",
-    "entities": [
-      {
-        "type": "Société à Responsabilité Limitée",
-        "localName": "SARL (private limited equivalent)",
-        "requirements": [
-          "Company name and objects",
-          "Statutes (articles) under OHADA Uniform Act",
-          "At least 1 shareholder (confirm local practice)",
-          "Manager (gérant) particulars",
-          "Registered office in the country",
-          "Deposit of share capital in a local bank (rules vary)",
-          "RCCM registration via Guichet Unique / CFE where available",
-          "Notarisation of statutes often required"
-        ],
-        "costs": [
-          {
-            "item": "RCCM / guichet unique fees",
-            "amount": "≈ 25,000–150,000 CDF",
-            "note": "Wide variance by country"
-          },
-          {
-            "item": "Notary / legal fees",
-            "amount": "≈ 100,000–500,000 CDF",
-            "note": "Often the larger cost"
-          },
-          {
-            "item": "Capital deposit",
-            "amount": "Per statutes",
-            "note": "Minimum capital rules eased in many OHADA states — confirm locally"
-          }
-        ],
-        "timeline": "Often 3–21 business days if file is complete"
-      },
-      {
-        "type": "Société Anonyme",
-        "localName": "SA (public limited equivalent)",
-        "requirements": [
-          "Higher governance (board) requirements",
-          "Statutes and capital suited to SA form",
-          "RCCM registration",
-          "Notary involvement typical"
-        ],
-        "costs": [
-          {
-            "item": "Legal + registry package",
-            "amount": "Higher than SARL",
-            "note": "Use local counsel"
-          }
-        ],
-        "timeline": "Several weeks"
-      },
-      {
-        "type": "Entreprise Individuelle",
-        "localName": "Sole trader / business name",
-        "requirements": [
-          "Trader registration / RCCM as applicable",
-          "National ID and address",
-          "Tax identification after registration"
-        ],
-        "costs": [
-          {
-            "item": "Registration",
-            "amount": "≈ 10,000–75,000 CDF",
-            "note": "Draft"
-          }
-        ],
-        "timeline": "A few days to 2 weeks"
-      }
-    ],
-    "notes": "Draft — verify with Guichet Unique de Création d'Entreprise / RCCM and local counsel. Fees and document lists change."
-  },
-  {
-    "slug": "djibouti",
-    "name": "Djibouti",
-    "region": "Africa",
-    "currency": "DJF",
-    "regulator": "ANPI / Commercial Registry",
-    "entities": [
-      {
-        "type": "Private Limited Company",
-        "localName": "Ltd / Pty-style company",
-        "requirements": [
-          "Name reservation with companies registry",
-          "Constitution / memorandum & articles",
-          "Director(s) and shareholder particulars + IDs",
-          "Registered office in-country",
-          "Statement of share capital",
-          "Beneficial ownership disclosure where required"
-        ],
-        "costs": [
-          {
-            "item": "Registry filing",
-            "amount": "Approx. low–moderate official fees in DJF",
-            "note": "Confirm current tariff"
-          },
-          {
-            "item": "Professional / agent fees",
-            "amount": "Often several times the official fee",
-            "note": "Market rates"
-          }
-        ],
-        "timeline": "Several days to 3 weeks typical"
-      },
-      {
-        "type": "Business Name / Sole Proprietorship",
-        "localName": "Enterprise",
-        "requirements": [
-          "Business name approval",
-          "Proprietor ID and address",
-          "Nature of business"
-        ],
-        "costs": [
-          {
-            "item": "Registration",
-            "amount": "Lower than company filing (DJF)",
-            "note": "Draft"
-          }
-        ],
-        "timeline": "A few days"
-      }
-    ],
-    "notes": "Draft — verify with ANPI / Commercial Registry and local counsel. Fees and document lists change."
+    "notes": "Draft — federal vs provincial choice depends on brand and where you operate. CRA business number after incorporation."
   },
   {
     "slug": "egypt",
@@ -1079,48 +229,47 @@ window.COUNTRIES = [
     "name": "Equatorial Guinea",
     "region": "Africa",
     "currency": "XAF",
-    "regulator": "Commercial Registry",
+    "regulator": "Commercial Registry / OHADA RCCM",
     "entities": [
       {
         "type": "Société à Responsabilité Limitée",
-        "localName": "SARL (private limited equivalent)",
+        "localName": "SARL (private limited / OHADA)",
         "requirements": [
-          "Company name and objects",
-          "Statutes (articles) under OHADA Uniform Act",
-          "At least 1 shareholder (confirm local practice)",
-          "Manager (gérant) particulars",
-          "Registered office in the country",
-          "Deposit of share capital in a local bank (rules vary)",
-          "RCCM registration via Guichet Unique / CFE where available",
-          "Notarisation of statutes often required"
+          "Company name and corporate objects",
+          "Statutes under OHADA Uniform Act on Commercial Companies",
+          "Shareholder(s) and gérant (manager) particulars",
+          "Registered office in Equatorial Guinea",
+          "Notarisation of statutes (typical)",
+          "RCCM registration via Commercial Registry / one-stop where available",
+          "Tax identification after incorporation",
+          "Spanish and/or French filings — confirm local practice (bilingual environment)"
         ],
         "costs": [
           {
-            "item": "RCCM / guichet unique fees",
-            "amount": "≈ 25,000–150,000 XAF",
-            "note": "Wide variance by country"
+            "item": "RCCM / registry fees",
+            "amount": "≈ XAF 50,000–200,000",
+            "note": "Wide variance — confirm locally"
           },
           {
             "item": "Notary / legal fees",
-            "amount": "≈ 100,000–500,000 XAF",
-            "note": "Often the larger cost"
+            "amount": "≈ XAF 200,000–800,000+",
+            "note": "Often the main cost"
           },
           {
             "item": "Capital deposit",
             "amount": "Per statutes",
-            "note": "Minimum capital rules eased in many OHADA states — confirm locally"
+            "note": "OHADA minimum capital rules eased — confirm current practice"
           }
         ],
-        "timeline": "Often 3–21 business days if file is complete"
+        "timeline": "Often 2–4 weeks if notarisation and registry slots align"
       },
       {
         "type": "Société Anonyme",
-        "localName": "SA (public limited equivalent)",
+        "localName": "SA",
         "requirements": [
-          "Higher governance (board) requirements",
-          "Statutes and capital suited to SA form",
-          "RCCM registration",
-          "Notary involvement typical"
+          "Board / higher governance under OHADA",
+          "Statutes and capital suited to SA",
+          "RCCM registration and notary involvement"
         ],
         "costs": [
           {
@@ -1133,307 +282,23 @@ window.COUNTRIES = [
       },
       {
         "type": "Entreprise Individuelle",
-        "localName": "Sole trader / business name",
+        "localName": "Sole trader",
         "requirements": [
           "Trader registration / RCCM as applicable",
           "National ID and address",
-          "Tax identification after registration"
+          "Tax file after registration"
         ],
         "costs": [
           {
             "item": "Registration",
-            "amount": "≈ 10,000–75,000 XAF",
-            "note": "Draft"
-          }
-        ],
-        "timeline": "A few days to 2 weeks"
-      }
-    ],
-    "notes": "Draft — verify with Commercial Registry and local counsel. Fees and document lists change."
-  },
-  {
-    "slug": "eritrea",
-    "name": "Eritrea",
-    "region": "Africa",
-    "currency": "ERN",
-    "regulator": "Ministry of Trade and Industry",
-    "entities": [
-      {
-        "type": "Private Limited Company",
-        "localName": "Ltd / Pty-style company",
-        "requirements": [
-          "Name reservation with companies registry",
-          "Constitution / memorandum & articles",
-          "Director(s) and shareholder particulars + IDs",
-          "Registered office in-country",
-          "Statement of share capital",
-          "Beneficial ownership disclosure where required"
-        ],
-        "costs": [
-          {
-            "item": "Registry filing",
-            "amount": "Approx. low–moderate official fees in ERN",
-            "note": "Confirm current tariff"
-          },
-          {
-            "item": "Professional / agent fees",
-            "amount": "Often several times the official fee",
-            "note": "Market rates"
-          }
-        ],
-        "timeline": "Several days to 3 weeks typical"
-      },
-      {
-        "type": "Business Name / Sole Proprietorship",
-        "localName": "Enterprise",
-        "requirements": [
-          "Business name approval",
-          "Proprietor ID and address",
-          "Nature of business"
-        ],
-        "costs": [
-          {
-            "item": "Registration",
-            "amount": "Lower than company filing (ERN)",
-            "note": "Draft"
-          }
-        ],
-        "timeline": "A few days"
-      }
-    ],
-    "notes": "Draft — verify with Ministry of Trade and Industry and local counsel. Fees and document lists change."
-  },
-  {
-    "slug": "eswatini",
-    "name": "Eswatini",
-    "region": "Africa",
-    "currency": "SZL",
-    "regulator": "Registrar of Companies",
-    "entities": [
-      {
-        "type": "Private Company",
-        "localName": "Ltd / Pty-style company",
-        "requirements": [
-          "Name reservation with companies registry",
-          "Constitution / memorandum & articles",
-          "Director(s) and shareholder particulars + IDs",
-          "Registered office in-country",
-          "Statement of share capital",
-          "Beneficial ownership disclosure where required"
-        ],
-        "costs": [
-          {
-            "item": "Registry filing",
-            "amount": "Approx. low–moderate official fees in SZL",
-            "note": "Confirm current tariff"
-          },
-          {
-            "item": "Professional / agent fees",
-            "amount": "Often several times the official fee",
-            "note": "Market rates"
-          }
-        ],
-        "timeline": "Several days to 3 weeks typical"
-      },
-      {
-        "type": "Business Name / Sole Proprietorship",
-        "localName": "Enterprise",
-        "requirements": [
-          "Business name approval",
-          "Proprietor ID and address",
-          "Nature of business"
-        ],
-        "costs": [
-          {
-            "item": "Registration",
-            "amount": "Lower than company filing (SZL)",
-            "note": "Draft"
-          }
-        ],
-        "timeline": "A few days"
-      }
-    ],
-    "notes": "Draft — verify with Registrar of Companies and local counsel. Fees and document lists change."
-  },
-  {
-    "slug": "ethiopia",
-    "name": "Ethiopia",
-    "region": "Africa",
-    "currency": "ETB",
-    "regulator": "Ministry of Trade and Regional Integration / Documents Authentication",
-    "entities": [
-      {
-        "type": "Private Limited Company",
-        "localName": "PLC",
-        "requirements": [
-          "Trade name and documents authenticated as required",
-          "Memorandum & articles",
-          "Minimum capital rules (investment law — verify current thresholds)",
-          "Managers / shareholders IDs",
-          "Commercial registration and business licence"
-        ],
-        "costs": [
-          {
-            "item": "Registration / licence",
-            "amount": "≈ ETB thousands–tens of thousands",
-            "note": "Varies by capital & sector"
-          },
-          {
-            "item": "Legal fees",
-            "amount": "Significant",
-            "note": "Use local counsel"
-          }
-        ],
-        "timeline": "Often 2–6 weeks"
-      },
-      {
-        "type": "Sole Proprietorship",
-        "localName": "Business person",
-        "requirements": [
-          "ID",
-          "Business licence via relevant bureau",
-          "Tax registration"
-        ],
-        "costs": [
-          {
-            "item": "Licence fees",
-            "amount": "Lower than PLC",
+            "amount": "≈ XAF 25,000–100,000",
             "note": "Draft"
           }
         ],
         "timeline": "1–3 weeks"
       }
     ],
-    "notes": "Draft — verify with Ministry of Trade and Regional Integration / Documents Authentication and local counsel. Fees and document lists change."
-  },
-  {
-    "slug": "gabon",
-    "name": "Gabon",
-    "region": "Africa",
-    "currency": "XAF",
-    "regulator": "ANPI-Gabon / RCCM",
-    "entities": [
-      {
-        "type": "Société à Responsabilité Limitée",
-        "localName": "SARL (private limited equivalent)",
-        "requirements": [
-          "Company name and objects",
-          "Statutes (articles) under OHADA Uniform Act",
-          "At least 1 shareholder (confirm local practice)",
-          "Manager (gérant) particulars",
-          "Registered office in the country",
-          "Deposit of share capital in a local bank (rules vary)",
-          "RCCM registration via Guichet Unique / CFE where available",
-          "Notarisation of statutes often required"
-        ],
-        "costs": [
-          {
-            "item": "RCCM / guichet unique fees",
-            "amount": "≈ 25,000–150,000 XAF",
-            "note": "Wide variance by country"
-          },
-          {
-            "item": "Notary / legal fees",
-            "amount": "≈ 100,000–500,000 XAF",
-            "note": "Often the larger cost"
-          },
-          {
-            "item": "Capital deposit",
-            "amount": "Per statutes",
-            "note": "Minimum capital rules eased in many OHADA states — confirm locally"
-          }
-        ],
-        "timeline": "Often 3–21 business days if file is complete"
-      },
-      {
-        "type": "Société Anonyme",
-        "localName": "SA (public limited equivalent)",
-        "requirements": [
-          "Higher governance (board) requirements",
-          "Statutes and capital suited to SA form",
-          "RCCM registration",
-          "Notary involvement typical"
-        ],
-        "costs": [
-          {
-            "item": "Legal + registry package",
-            "amount": "Higher than SARL",
-            "note": "Use local counsel"
-          }
-        ],
-        "timeline": "Several weeks"
-      },
-      {
-        "type": "Entreprise Individuelle",
-        "localName": "Sole trader / business name",
-        "requirements": [
-          "Trader registration / RCCM as applicable",
-          "National ID and address",
-          "Tax identification after registration"
-        ],
-        "costs": [
-          {
-            "item": "Registration",
-            "amount": "≈ 10,000–75,000 XAF",
-            "note": "Draft"
-          }
-        ],
-        "timeline": "A few days to 2 weeks"
-      }
-    ],
-    "notes": "Draft — verify with ANPI-Gabon / RCCM and local counsel. Fees and document lists change."
-  },
-  {
-    "slug": "gambia",
-    "name": "Gambia",
-    "region": "Africa",
-    "currency": "GMD",
-    "regulator": "Registrar of Companies",
-    "entities": [
-      {
-        "type": "Private Limited Company",
-        "localName": "Ltd / Pty-style company",
-        "requirements": [
-          "Name reservation with companies registry",
-          "Constitution / memorandum & articles",
-          "Director(s) and shareholder particulars + IDs",
-          "Registered office in-country",
-          "Statement of share capital",
-          "Beneficial ownership disclosure where required"
-        ],
-        "costs": [
-          {
-            "item": "Registry filing",
-            "amount": "Approx. low–moderate official fees in GMD",
-            "note": "Confirm current tariff"
-          },
-          {
-            "item": "Professional / agent fees",
-            "amount": "Often several times the official fee",
-            "note": "Market rates"
-          }
-        ],
-        "timeline": "Several days to 3 weeks typical"
-      },
-      {
-        "type": "Business Name / Sole Proprietorship",
-        "localName": "Enterprise",
-        "requirements": [
-          "Business name approval",
-          "Proprietor ID and address",
-          "Nature of business"
-        ],
-        "costs": [
-          {
-            "item": "Registration",
-            "amount": "Lower than company filing (GMD)",
-            "note": "Draft"
-          }
-        ],
-        "timeline": "A few days"
-      }
-    ],
-    "notes": "Draft — verify with Registrar of Companies and local counsel. Fees and document lists change."
+    "notes": "Draft — OHADA applies. Oil/gas and foreign investment often need extra ministry / ANIP-style steps — verify before quoting clients."
   },
   {
     "slug": "ghana",
@@ -1516,160 +381,6 @@ window.COUNTRIES = [
     "notes": "Draft — after ORC: TIN with GRA, possible VAT/SSNIT registrations depending on activity."
   },
   {
-    "slug": "guinea",
-    "name": "Guinea",
-    "region": "Africa",
-    "currency": "GNF",
-    "regulator": "APIP / RCCM",
-    "entities": [
-      {
-        "type": "Société à Responsabilité Limitée",
-        "localName": "SARL (private limited equivalent)",
-        "requirements": [
-          "Company name and objects",
-          "Statutes (articles) under OHADA Uniform Act",
-          "At least 1 shareholder (confirm local practice)",
-          "Manager (gérant) particulars",
-          "Registered office in the country",
-          "Deposit of share capital in a local bank (rules vary)",
-          "RCCM registration via Guichet Unique / CFE where available",
-          "Notarisation of statutes often required"
-        ],
-        "costs": [
-          {
-            "item": "RCCM / guichet unique fees",
-            "amount": "≈ 25,000–150,000 GNF",
-            "note": "Wide variance by country"
-          },
-          {
-            "item": "Notary / legal fees",
-            "amount": "≈ 100,000–500,000 GNF",
-            "note": "Often the larger cost"
-          },
-          {
-            "item": "Capital deposit",
-            "amount": "Per statutes",
-            "note": "Minimum capital rules eased in many OHADA states — confirm locally"
-          }
-        ],
-        "timeline": "Often 3–21 business days if file is complete"
-      },
-      {
-        "type": "Société Anonyme",
-        "localName": "SA (public limited equivalent)",
-        "requirements": [
-          "Higher governance (board) requirements",
-          "Statutes and capital suited to SA form",
-          "RCCM registration",
-          "Notary involvement typical"
-        ],
-        "costs": [
-          {
-            "item": "Legal + registry package",
-            "amount": "Higher than SARL",
-            "note": "Use local counsel"
-          }
-        ],
-        "timeline": "Several weeks"
-      },
-      {
-        "type": "Entreprise Individuelle",
-        "localName": "Sole trader / business name",
-        "requirements": [
-          "Trader registration / RCCM as applicable",
-          "National ID and address",
-          "Tax identification after registration"
-        ],
-        "costs": [
-          {
-            "item": "Registration",
-            "amount": "≈ 10,000–75,000 GNF",
-            "note": "Draft"
-          }
-        ],
-        "timeline": "A few days to 2 weeks"
-      }
-    ],
-    "notes": "Draft — verify with APIP / RCCM and local counsel. Fees and document lists change."
-  },
-  {
-    "slug": "guinea-bissau",
-    "name": "Guinea-Bissau",
-    "region": "Africa",
-    "currency": "XOF",
-    "regulator": "Centro de Formalização de Empresas / RCCM",
-    "entities": [
-      {
-        "type": "Société à Responsabilité Limitée",
-        "localName": "SARL (private limited equivalent)",
-        "requirements": [
-          "Company name and objects",
-          "Statutes (articles) under OHADA Uniform Act",
-          "At least 1 shareholder (confirm local practice)",
-          "Manager (gérant) particulars",
-          "Registered office in the country",
-          "Deposit of share capital in a local bank (rules vary)",
-          "RCCM registration via Guichet Unique / CFE where available",
-          "Notarisation of statutes often required"
-        ],
-        "costs": [
-          {
-            "item": "RCCM / guichet unique fees",
-            "amount": "≈ 25,000–150,000 XOF",
-            "note": "Wide variance by country"
-          },
-          {
-            "item": "Notary / legal fees",
-            "amount": "≈ 100,000–500,000 XOF",
-            "note": "Often the larger cost"
-          },
-          {
-            "item": "Capital deposit",
-            "amount": "Per statutes",
-            "note": "Minimum capital rules eased in many OHADA states — confirm locally"
-          }
-        ],
-        "timeline": "Often 3–21 business days if file is complete"
-      },
-      {
-        "type": "Société Anonyme",
-        "localName": "SA (public limited equivalent)",
-        "requirements": [
-          "Higher governance (board) requirements",
-          "Statutes and capital suited to SA form",
-          "RCCM registration",
-          "Notary involvement typical"
-        ],
-        "costs": [
-          {
-            "item": "Legal + registry package",
-            "amount": "Higher than SARL",
-            "note": "Use local counsel"
-          }
-        ],
-        "timeline": "Several weeks"
-      },
-      {
-        "type": "Entreprise Individuelle",
-        "localName": "Sole trader / business name",
-        "requirements": [
-          "Trader registration / RCCM as applicable",
-          "National ID and address",
-          "Tax identification after registration"
-        ],
-        "costs": [
-          {
-            "item": "Registration",
-            "amount": "≈ 10,000–75,000 XOF",
-            "note": "Draft"
-          }
-        ],
-        "timeline": "A few days to 2 weeks"
-      }
-    ],
-    "notes": "Draft — verify with Centro de Formalização de Empresas / RCCM and local counsel. Fees and document lists change."
-  },
-  {
     "slug": "kenya",
     "name": "Kenya",
     "region": "Africa",
@@ -1746,161 +457,6 @@ window.COUNTRIES = [
     "notes": "Draft — post-incorporation: KRA obligations, county business permits, NSSF/NHIF for employees."
   },
   {
-    "slug": "lesotho",
-    "name": "Lesotho",
-    "region": "Africa",
-    "currency": "LSL",
-    "regulator": "OBFC / Registrar of Companies",
-    "entities": [
-      {
-        "type": "Private Company",
-        "localName": "Ltd / Pty-style company",
-        "requirements": [
-          "Name reservation with companies registry",
-          "Constitution / memorandum & articles",
-          "Director(s) and shareholder particulars + IDs",
-          "Registered office in-country",
-          "Statement of share capital",
-          "Beneficial ownership disclosure where required"
-        ],
-        "costs": [
-          {
-            "item": "Registry filing",
-            "amount": "Approx. low–moderate official fees in LSL",
-            "note": "Confirm current tariff"
-          },
-          {
-            "item": "Professional / agent fees",
-            "amount": "Often several times the official fee",
-            "note": "Market rates"
-          }
-        ],
-        "timeline": "Several days to 3 weeks typical"
-      },
-      {
-        "type": "Business Name / Sole Proprietorship",
-        "localName": "Enterprise",
-        "requirements": [
-          "Business name approval",
-          "Proprietor ID and address",
-          "Nature of business"
-        ],
-        "costs": [
-          {
-            "item": "Registration",
-            "amount": "Lower than company filing (LSL)",
-            "note": "Draft"
-          }
-        ],
-        "timeline": "A few days"
-      }
-    ],
-    "notes": "Draft — verify with OBFC / Registrar of Companies and local counsel. Fees and document lists change."
-  },
-  {
-    "slug": "liberia",
-    "name": "Liberia",
-    "region": "Africa",
-    "currency": "LRD",
-    "regulator": "Liberia Business Registry",
-    "entities": [
-      {
-        "type": "Private Limited Company",
-        "localName": "Ltd / Pty-style company",
-        "requirements": [
-          "Name reservation with companies registry",
-          "Constitution / memorandum & articles",
-          "Director(s) and shareholder particulars + IDs",
-          "Registered office in-country",
-          "Statement of share capital",
-          "Beneficial ownership disclosure where required"
-        ],
-        "costs": [
-          {
-            "item": "Registry filing",
-            "amount": "Approx. low–moderate official fees in LRD",
-            "note": "Confirm current tariff"
-          },
-          {
-            "item": "Professional / agent fees",
-            "amount": "Often several times the official fee",
-            "note": "Market rates"
-          }
-        ],
-        "timeline": "Several days to 3 weeks typical"
-      },
-      {
-        "type": "Business Name / Sole Proprietorship",
-        "localName": "Enterprise",
-        "requirements": [
-          "Business name approval",
-          "Proprietor ID and address",
-          "Nature of business"
-        ],
-        "costs": [
-          {
-            "item": "Registration",
-            "amount": "Lower than company filing (LRD)",
-            "note": "Draft"
-          }
-        ],
-        "timeline": "A few days"
-      }
-    ],
-    "notes": "Draft — verify with Liberia Business Registry and local counsel. Fees and document lists change."
-  },
-  {
-    "slug": "libya",
-    "name": "Libya",
-    "region": "Africa",
-    "currency": "LYD",
-    "regulator": "Commercial Registry / Ministry of Economy",
-    "entities": [
-      {
-        "type": "Limited Liability Company",
-        "localName": "Private limited equivalent",
-        "requirements": [
-          "Name clearance",
-          "Articles / statutes (often Arabic + French)",
-          "Managers / partners IDs",
-          "Registered office",
-          "Commercial registry filing",
-          "Tax and social registrations after incorporation"
-        ],
-        "costs": [
-          {
-            "item": "Registry + stamp duties",
-            "amount": "Varies (LYD)",
-            "note": "Confirm current schedule"
-          },
-          {
-            "item": "Legal / notary",
-            "amount": "Often significant",
-            "note": "Market rates"
-          }
-        ],
-        "timeline": "1–4 weeks"
-      },
-      {
-        "type": "Sole Proprietorship",
-        "localName": "Personne physique / auto-entrepreneur where available",
-        "requirements": [
-          "Trader / auto-entrepreneur registration if applicable",
-          "National ID and tax file"
-        ],
-        "costs": [
-          {
-            "item": "Registration",
-            "amount": "Usually lower (LYD)",
-            "note": "Draft"
-          }
-        ],
-        "timeline": "Days to a few weeks"
-      }
-    ],
-    "notes": "Draft — verify with Commercial Registry / Ministry of Economy and local counsel. Fees and document lists change."
-  },
-  {
     "slug": "madagascar",
     "name": "Madagascar",
     "region": "Africa",
@@ -1908,153 +464,47 @@ window.COUNTRIES = [
     "regulator": "EDBM / Commercial Registry",
     "entities": [
       {
-        "type": "Private Limited Company",
-        "localName": "Ltd / Pty-style company",
-        "requirements": [
-          "Name reservation with companies registry",
-          "Constitution / memorandum & articles",
-          "Director(s) and shareholder particulars + IDs",
-          "Registered office in-country",
-          "Statement of share capital",
-          "Beneficial ownership disclosure where required"
-        ],
-        "costs": [
-          {
-            "item": "Registry filing",
-            "amount": "Approx. low–moderate official fees in MGA",
-            "note": "Confirm current tariff"
-          },
-          {
-            "item": "Professional / agent fees",
-            "amount": "Often several times the official fee",
-            "note": "Market rates"
-          }
-        ],
-        "timeline": "Several days to 3 weeks typical"
-      },
-      {
-        "type": "Business Name / Sole Proprietorship",
-        "localName": "Enterprise",
-        "requirements": [
-          "Business name approval",
-          "Proprietor ID and address",
-          "Nature of business"
-        ],
-        "costs": [
-          {
-            "item": "Registration",
-            "amount": "Lower than company filing (MGA)",
-            "note": "Draft"
-          }
-        ],
-        "timeline": "A few days"
-      }
-    ],
-    "notes": "Draft — verify with EDBM / Commercial Registry and local counsel. Fees and document lists change."
-  },
-  {
-    "slug": "malawi",
-    "name": "Malawi",
-    "region": "Africa",
-    "currency": "MWK",
-    "regulator": "Registrar General",
-    "entities": [
-      {
-        "type": "Private Limited Company",
-        "localName": "Ltd / Pty-style company",
-        "requirements": [
-          "Name reservation with companies registry",
-          "Constitution / memorandum & articles",
-          "Director(s) and shareholder particulars + IDs",
-          "Registered office in-country",
-          "Statement of share capital",
-          "Beneficial ownership disclosure where required"
-        ],
-        "costs": [
-          {
-            "item": "Registry filing",
-            "amount": "Approx. low–moderate official fees in MWK",
-            "note": "Confirm current tariff"
-          },
-          {
-            "item": "Professional / agent fees",
-            "amount": "Often several times the official fee",
-            "note": "Market rates"
-          }
-        ],
-        "timeline": "Several days to 3 weeks typical"
-      },
-      {
-        "type": "Business Name / Sole Proprietorship",
-        "localName": "Enterprise",
-        "requirements": [
-          "Business name approval",
-          "Proprietor ID and address",
-          "Nature of business"
-        ],
-        "costs": [
-          {
-            "item": "Registration",
-            "amount": "Lower than company filing (MWK)",
-            "note": "Draft"
-          }
-        ],
-        "timeline": "A few days"
-      }
-    ],
-    "notes": "Draft — verify with Registrar General and local counsel. Fees and document lists change."
-  },
-  {
-    "slug": "mali",
-    "name": "Mali",
-    "region": "Africa",
-    "currency": "XOF",
-    "regulator": "API-Mali / RCCM",
-    "entities": [
-      {
         "type": "Société à Responsabilité Limitée",
-        "localName": "SARL (private limited equivalent)",
+        "localName": "SARL",
         "requirements": [
-          "Company name and objects",
-          "Statutes (articles) under OHADA Uniform Act",
-          "At least 1 shareholder (confirm local practice)",
-          "Manager (gérant) particulars",
-          "Registered office in the country",
-          "Deposit of share capital in a local bank (rules vary)",
-          "RCCM registration via Guichet Unique / CFE where available",
-          "Notarisation of statutes often required"
+          "Company name clearance",
+          "Statutes (statuts) — French commonly used",
+          "Associés (shareholders) and gérant particulars + IDs",
+          "Registered office (siège social) in Madagascar",
+          "Filing via EDBM one-stop shop / Commercial Registry",
+          "Tax identification (NIF) and statistical registration follow",
+          "Capital deposit evidence where required"
         ],
         "costs": [
           {
-            "item": "RCCM / guichet unique fees",
-            "amount": "≈ 25,000–150,000 XOF",
-            "note": "Wide variance by country"
+            "item": "EDBM / registry package",
+            "amount": "≈ MGA 200,000–1,000,000+",
+            "note": "Confirm EDBM current schedule"
           },
           {
-            "item": "Notary / legal fees",
-            "amount": "≈ 100,000–500,000 XOF",
-            "note": "Often the larger cost"
+            "item": "Notary / lawyer fees",
+            "amount": "≈ MGA 500,000–2,500,000+",
+            "note": "Market rates; often the larger cost"
           },
           {
-            "item": "Capital deposit",
-            "amount": "Per statutes",
-            "note": "Minimum capital rules eased in many OHADA states — confirm locally"
+            "item": "Professional / agent (foreign clients)",
+            "amount": "USD 400–1,500 equivalent common",
+            "note": "Draft"
           }
         ],
-        "timeline": "Often 3–21 business days if file is complete"
+        "timeline": "Often 2–4 weeks through EDBM when complete"
       },
       {
         "type": "Société Anonyme",
-        "localName": "SA (public limited equivalent)",
+        "localName": "SA",
         "requirements": [
-          "Higher governance (board) requirements",
-          "Statutes and capital suited to SA form",
-          "RCCM registration",
-          "Notary involvement typical"
+          "Higher capital and board requirements than SARL",
+          "Statutes suited to SA form",
+          "EDBM / registry filings"
         ],
         "costs": [
           {
-            "item": "Legal + registry package",
+            "item": "Legal + registry",
             "amount": "Higher than SARL",
             "note": "Use local counsel"
           }
@@ -2063,228 +513,23 @@ window.COUNTRIES = [
       },
       {
         "type": "Entreprise Individuelle",
-        "localName": "Sole trader / business name",
-        "requirements": [
-          "Trader registration / RCCM as applicable",
-          "National ID and address",
-          "Tax identification after registration"
-        ],
-        "costs": [
-          {
-            "item": "Registration",
-            "amount": "≈ 10,000–75,000 XOF",
-            "note": "Draft"
-          }
-        ],
-        "timeline": "A few days to 2 weeks"
-      }
-    ],
-    "notes": "Draft — verify with API-Mali / RCCM and local counsel. Fees and document lists change."
-  },
-  {
-    "slug": "mauritania",
-    "name": "Mauritania",
-    "region": "Africa",
-    "currency": "MRU",
-    "regulator": "Guichet Unique / Commercial Registry",
-    "entities": [
-      {
-        "type": "Société à Responsabilité Limitée (SARL)",
-        "localName": "Private limited equivalent",
-        "requirements": [
-          "Name clearance",
-          "Articles / statutes (often Arabic + French)",
-          "Managers / partners IDs",
-          "Registered office",
-          "Commercial registry filing",
-          "Tax and social registrations after incorporation"
-        ],
-        "costs": [
-          {
-            "item": "Registry + stamp duties",
-            "amount": "Varies (MRU)",
-            "note": "Confirm current schedule"
-          },
-          {
-            "item": "Legal / notary",
-            "amount": "Often significant",
-            "note": "Market rates"
-          }
-        ],
-        "timeline": "1–4 weeks"
-      },
-      {
-        "type": "Sole Proprietorship",
-        "localName": "Personne physique / auto-entrepreneur where available",
-        "requirements": [
-          "Trader / auto-entrepreneur registration if applicable",
-          "National ID and tax file"
-        ],
-        "costs": [
-          {
-            "item": "Registration",
-            "amount": "Usually lower (MRU)",
-            "note": "Draft"
-          }
-        ],
-        "timeline": "Days to a few weeks"
-      }
-    ],
-    "notes": "Draft — verify with Guichet Unique / Commercial Registry and local counsel. Fees and document lists change."
-  },
-  {
-    "slug": "mauritius",
-    "name": "Mauritius",
-    "region": "Africa",
-    "currency": "MUR",
-    "regulator": "Corporate and Business Registration Department (CBRD)",
-    "entities": [
-      {
-        "type": "Private Company Limited by Shares",
-        "localName": "Ltd",
-        "requirements": [
-          "Name approval via CBRD",
-          "Constitution",
-          "At least 1 director and 1 shareholder",
-          "Registered office in Mauritius",
-          "File incorporation documents with CBRD"
-        ],
-        "costs": [
-          {
-            "item": "CBRD fees",
-            "amount": "≈ MUR 3,000–10,000+",
-            "note": "Confirm schedule; Global Business licenses extra"
-          },
-          {
-            "item": "Professional fees",
-            "amount": "≈ MUR 10,000–50,000+",
-            "note": "Higher for GBC structures"
-          }
-        ],
-        "timeline": "Often 2–10 business days"
-      },
-      {
-        "type": "Global Business Company",
-        "localName": "GBC (licensed)",
-        "requirements": [
-          "FSC licensing considerations",
-          "Local management / substance expectations",
-          "CBRD + FSC filings"
-        ],
-        "costs": [
-          {
-            "item": "Licence + agent annual",
-            "amount": "USD thousands / year typical",
-            "note": "Verify with management company"
-          }
-        ],
-        "timeline": "Weeks"
-      }
-    ],
-    "notes": "Draft — verify with Corporate and Business Registration Department (CBRD) and local counsel. Fees and document lists change."
-  },
-  {
-    "slug": "morocco",
-    "name": "Morocco",
-    "region": "Africa",
-    "currency": "MAD",
-    "regulator": "OMPIC / Commercial Court Registry",
-    "entities": [
-      {
-        "type": "Société à Responsabilité Limitée (SARL)",
-        "localName": "Private limited equivalent",
-        "requirements": [
-          "Name clearance",
-          "Articles / statutes (often Arabic + French)",
-          "Managers / partners IDs",
-          "Registered office",
-          "Commercial registry filing",
-          "Tax and social registrations after incorporation"
-        ],
-        "costs": [
-          {
-            "item": "Registry + stamp duties",
-            "amount": "Varies (MAD)",
-            "note": "Confirm current schedule"
-          },
-          {
-            "item": "Legal / notary",
-            "amount": "Often significant",
-            "note": "Market rates"
-          }
-        ],
-        "timeline": "1–4 weeks"
-      },
-      {
-        "type": "Sole Proprietorship",
-        "localName": "Personne physique / auto-entrepreneur where available",
-        "requirements": [
-          "Trader / auto-entrepreneur registration if applicable",
-          "National ID and tax file"
-        ],
-        "costs": [
-          {
-            "item": "Registration",
-            "amount": "Usually lower (MAD)",
-            "note": "Draft"
-          }
-        ],
-        "timeline": "Days to a few weeks"
-      }
-    ],
-    "notes": "Draft — verify with OMPIC / Commercial Court Registry and local counsel. Fees and document lists change."
-  },
-  {
-    "slug": "mozambique",
-    "name": "Mozambique",
-    "region": "Africa",
-    "currency": "MZN",
-    "regulator": "BAU / Conservatória do Registo Comercial",
-    "entities": [
-      {
-        "type": "Sociedade por Quotas",
-        "localName": "Lda (private limited equivalent)",
-        "requirements": [
-          "Company name certificate",
-          "Pacto social (articles)",
-          "Quota holders and managers IDs",
-          "Registered seat in-country",
-          "Commercial registry / one-stop shop filing",
-          "NIF / tax number after or during setup"
-        ],
-        "costs": [
-          {
-            "item": "Registry / one-stop fees",
-            "amount": "Moderate official fees (MZN)",
-            "note": "Confirm locally"
-          },
-          {
-            "item": "Lawyer / notary",
-            "amount": "Often the main cost",
-            "note": "Market rates"
-          }
-        ],
-        "timeline": "1–4 weeks typical"
-      },
-      {
-        "type": "Empresário em Nome Individual",
         "localName": "Sole trader",
         "requirements": [
-          "Individual trader registration",
-          "ID and address",
-          "Tax registration"
+          "Individual trader / professional registration",
+          "National ID and address",
+          "Tax and statistical numbers"
         ],
         "costs": [
           {
             "item": "Registration",
-            "amount": "Lower than Lda (MZN)",
-            "note": "Draft"
+            "amount": "Lower than SARL",
+            "note": "Draft — confirm EDBM"
           }
         ],
-        "timeline": "Days to 2 weeks"
+        "timeline": "1–3 weeks"
       }
     ],
-    "notes": "Draft — verify with BAU / Conservatória do Registo Comercial and local counsel. Fees and document lists change."
+    "notes": "Draft — EDBM is the usual one-stop entry point. Free-zone / large investment projects may use different tracks — verify."
   },
   {
     "slug": "namibia",
@@ -2298,120 +543,72 @@ window.COUNTRIES = [
         "localName": "Pty Ltd",
         "requirements": [
           "Name reservation with BIPA",
-          "MOI / incorporation documents",
-          "Director and shareholder details",
-          "Registered address in Namibia"
+          "Memorandum of Incorporation / incorporation documents",
+          "At least 1 director",
+          "Shareholder particulars",
+          "Registered address in Namibia",
+          "ID / passport copies for directors and shareholders"
         ],
         "costs": [
           {
-            "item": "BIPA fees",
+            "item": "BIPA name reservation",
+            "amount": "≈ NAD 50–150",
+            "note": "Confirm BIPA tariff"
+          },
+          {
+            "item": "Incorporation filing",
             "amount": "≈ NAD 100–500",
-            "note": "Confirm BIPA"
+            "note": "Confirm current schedule"
           },
           {
-            "item": "Professional fees",
+            "item": "Professional / agent fees",
             "amount": "≈ NAD 2,000–10,000",
-            "note": "Market"
+            "note": "Market rates"
           }
         ],
-        "timeline": "Days to 2 weeks"
+        "timeline": "Often a few days to 2 weeks"
       },
       {
-        "type": "Business Name / Sole Proprietorship",
-        "localName": "Enterprise",
+        "type": "Close Corporation",
+        "localName": "CC (legacy — confirm if still registrable)",
         "requirements": [
-          "Business name approval",
-          "Proprietor ID and address",
-          "Nature of business"
+          "Historically popular small-business form",
+          "Confirm with BIPA whether new CCs are still accepted",
+          "Members and founding statement if still available"
         ],
         "costs": [
           {
-            "item": "Registration",
-            "amount": "Lower than company filing (NAD)",
-            "note": "Draft"
+            "item": "Filing + professional",
+            "amount": "Similar band to Pty Ltd",
+            "note": "Verify availability first"
           }
         ],
-        "timeline": "A few days"
-      }
-    ],
-    "notes": "Draft — verify with BIPA (Business and Intellectual Property Authority) and local counsel. Fees and document lists change."
-  },
-  {
-    "slug": "niger",
-    "name": "Niger",
-    "region": "Africa",
-    "currency": "XOF",
-    "regulator": "Maison de l'Entreprise / RCCM",
-    "entities": [
+        "timeline": "Days to 2 weeks if still offered"
+      },
       {
-        "type": "Société à Responsabilité Limitée",
-        "localName": "SARL (private limited equivalent)",
+        "type": "Sole Proprietorship",
+        "localName": "Trading in own name",
         "requirements": [
-          "Company name and objects",
-          "Statutes (articles) under OHADA Uniform Act",
-          "At least 1 shareholder (confirm local practice)",
-          "Manager (gérant) particulars",
-          "Registered office in the country",
-          "Deposit of share capital in a local bank (rules vary)",
-          "RCCM registration via Guichet Unique / CFE where available",
-          "Notarisation of statutes often required"
+          "No separate Pty registration required",
+          "Tax registration with Inland Revenue as needed",
+          "Municipal / sector licences as applicable"
         ],
         "costs": [
           {
-            "item": "RCCM / guichet unique fees",
-            "amount": "≈ 25,000–150,000 XOF",
-            "note": "Wide variance by country"
+            "item": "Company registry fee",
+            "amount": "N/A",
+            "note": "Not a company"
           },
           {
-            "item": "Notary / legal fees",
-            "amount": "≈ 100,000–500,000 XOF",
-            "note": "Often the larger cost"
-          },
-          {
-            "item": "Capital deposit",
-            "amount": "Per statutes",
-            "note": "Minimum capital rules eased in many OHADA states — confirm locally"
+            "item": "Licence / tax setup",
+            "amount": "Varies",
+            "note": "Municipal + tax"
           }
         ],
-        "timeline": "Often 3–21 business days if file is complete"
-      },
-      {
-        "type": "Société Anonyme",
-        "localName": "SA (public limited equivalent)",
-        "requirements": [
-          "Higher governance (board) requirements",
-          "Statutes and capital suited to SA form",
-          "RCCM registration",
-          "Notary involvement typical"
-        ],
-        "costs": [
-          {
-            "item": "Legal + registry package",
-            "amount": "Higher than SARL",
-            "note": "Use local counsel"
-          }
-        ],
-        "timeline": "Several weeks"
-      },
-      {
-        "type": "Entreprise Individuelle",
-        "localName": "Sole trader / business name",
-        "requirements": [
-          "Trader registration / RCCM as applicable",
-          "National ID and address",
-          "Tax identification after registration"
-        ],
-        "costs": [
-          {
-            "item": "Registration",
-            "amount": "≈ 10,000–75,000 XOF",
-            "note": "Draft"
-          }
-        ],
-        "timeline": "A few days to 2 weeks"
+        "timeline": "Depends on licences"
       }
     ],
-    "notes": "Draft — verify with Maison de l'Entreprise / RCCM and local counsel. Fees and document lists change."
+    "notes": "Draft — after BIPA: tax registration, possible SSC, and sector licences. Aligns closely with South African-style practice."
   },
   {
     "slug": "nigeria",
@@ -2526,339 +723,6 @@ window.COUNTRIES = [
     "notes": "Draft — verify current CAC portal fees and CAMA rules. Post-incorporation: TIN, SCUML (if applicable), sector licences (NUPRC, etc.)."
   },
   {
-    "slug": "rwanda",
-    "name": "Rwanda",
-    "region": "Africa",
-    "currency": "RWF",
-    "regulator": "RDB (Rwanda Development Board)",
-    "entities": [
-      {
-        "type": "Private Limited Company",
-        "localName": "Ltd",
-        "requirements": [
-          "Online application via RDB business registration portal",
-          "Company name",
-          "Directors and shareholders details",
-          "Share capital information",
-          "Registered address in Rwanda",
-          "IDs / passports"
-        ],
-        "costs": [
-          {
-            "item": "RDB registration",
-            "amount": "Often low / promotional fees",
-            "note": "Confirm current RDB tariff — Rwanda is known for fast online setup"
-          },
-          {
-            "item": "Professional fees",
-            "amount": "≈ RWF 50,000–300,000",
-            "note": "If using an agent"
-          }
-        ],
-        "timeline": "Often same day to 2 business days online"
-      },
-      {
-        "type": "Domestic Company / Enterprise",
-        "localName": "Other local forms",
-        "requirements": [
-          "Choose form suited to activity (confirm on RDB)",
-          "Identity and address particulars"
-        ],
-        "costs": [
-          {
-            "item": "Registration",
-            "amount": "Confirm RDB",
-            "note": "Draft"
-          }
-        ],
-        "timeline": "Usually quick online"
-      }
-    ],
-    "notes": "Draft — RDB one-stop shop also helps with tax numbers; verify current fee holidays."
-  },
-  {
-    "slug": "sao-tome-and-principe",
-    "name": "Sao Tome and Principe",
-    "region": "Africa",
-    "currency": "STN",
-    "regulator": "Guiché Único / Commercial Registry",
-    "entities": [
-      {
-        "type": "Sociedade por Quotas",
-        "localName": "Lda (private limited equivalent)",
-        "requirements": [
-          "Company name certificate",
-          "Pacto social (articles)",
-          "Quota holders and managers IDs",
-          "Registered seat in-country",
-          "Commercial registry / one-stop shop filing",
-          "NIF / tax number after or during setup"
-        ],
-        "costs": [
-          {
-            "item": "Registry / one-stop fees",
-            "amount": "Moderate official fees (STN)",
-            "note": "Confirm locally"
-          },
-          {
-            "item": "Lawyer / notary",
-            "amount": "Often the main cost",
-            "note": "Market rates"
-          }
-        ],
-        "timeline": "1–4 weeks typical"
-      },
-      {
-        "type": "Empresário em Nome Individual",
-        "localName": "Sole trader",
-        "requirements": [
-          "Individual trader registration",
-          "ID and address",
-          "Tax registration"
-        ],
-        "costs": [
-          {
-            "item": "Registration",
-            "amount": "Lower than Lda (STN)",
-            "note": "Draft"
-          }
-        ],
-        "timeline": "Days to 2 weeks"
-      }
-    ],
-    "notes": "Draft — verify with Guiché Único / Commercial Registry and local counsel. Fees and document lists change."
-  },
-  {
-    "slug": "senegal",
-    "name": "Senegal",
-    "region": "Africa",
-    "currency": "XOF",
-    "regulator": "APIX / RCCM",
-    "entities": [
-      {
-        "type": "Société à Responsabilité Limitée",
-        "localName": "SARL (private limited equivalent)",
-        "requirements": [
-          "Company name and objects",
-          "Statutes (articles) under OHADA Uniform Act",
-          "At least 1 shareholder (confirm local practice)",
-          "Manager (gérant) particulars",
-          "Registered office in the country",
-          "Deposit of share capital in a local bank (rules vary)",
-          "RCCM registration via Guichet Unique / CFE where available",
-          "Notarisation of statutes often required"
-        ],
-        "costs": [
-          {
-            "item": "RCCM / guichet unique fees",
-            "amount": "≈ 25,000–150,000 XOF",
-            "note": "Wide variance by country"
-          },
-          {
-            "item": "Notary / legal fees",
-            "amount": "≈ 100,000–500,000 XOF",
-            "note": "Often the larger cost"
-          },
-          {
-            "item": "Capital deposit",
-            "amount": "Per statutes",
-            "note": "Minimum capital rules eased in many OHADA states — confirm locally"
-          }
-        ],
-        "timeline": "Often 3–21 business days if file is complete"
-      },
-      {
-        "type": "Société Anonyme",
-        "localName": "SA (public limited equivalent)",
-        "requirements": [
-          "Higher governance (board) requirements",
-          "Statutes and capital suited to SA form",
-          "RCCM registration",
-          "Notary involvement typical"
-        ],
-        "costs": [
-          {
-            "item": "Legal + registry package",
-            "amount": "Higher than SARL",
-            "note": "Use local counsel"
-          }
-        ],
-        "timeline": "Several weeks"
-      },
-      {
-        "type": "Entreprise Individuelle",
-        "localName": "Sole trader / business name",
-        "requirements": [
-          "Trader registration / RCCM as applicable",
-          "National ID and address",
-          "Tax identification after registration"
-        ],
-        "costs": [
-          {
-            "item": "Registration",
-            "amount": "≈ 10,000–75,000 XOF",
-            "note": "Draft"
-          }
-        ],
-        "timeline": "A few days to 2 weeks"
-      }
-    ],
-    "notes": "Draft — verify with APIX / RCCM and local counsel. Fees and document lists change."
-  },
-  {
-    "slug": "seychelles",
-    "name": "Seychelles",
-    "region": "Africa",
-    "currency": "SCR",
-    "regulator": "Registrar General / FSA (for IBCs)",
-    "entities": [
-      {
-        "type": "International Business Company",
-        "localName": "IBC",
-        "requirements": [
-          "Registered agent in Seychelles",
-          "Memorandum & Articles",
-          "Director / shareholder particulars (privacy rules evolving — confirm)",
-          "FSA / Registrar filings via agent"
-        ],
-        "costs": [
-          {
-            "item": "Incorporation via agent",
-            "amount": "≈ USD 500–1,500 year 1",
-            "note": "Includes agent; confirm"
-          },
-          {
-            "item": "Annual renewal",
-            "amount": "≈ USD 400–1,000+",
-            "note": "Agent + gov fees"
-          }
-        ],
-        "timeline": "1–5 business days typical via agent"
-      },
-      {
-        "type": "Domestic Company",
-        "localName": "Local company",
-        "requirements": [
-          "Registrar General filings",
-          "Local substance / tax considerations"
-        ],
-        "costs": [
-          {
-            "item": "Filing + professional",
-            "amount": "SCR / USD varies",
-            "note": "Draft"
-          }
-        ],
-        "timeline": "Days to weeks"
-      }
-    ],
-    "notes": "Draft — verify with Registrar General / FSA (for IBCs) and local counsel. Fees and document lists change."
-  },
-  {
-    "slug": "sierra-leone",
-    "name": "Sierra Leone",
-    "region": "Africa",
-    "currency": "SLE",
-    "regulator": "Corporate Affairs Commission",
-    "entities": [
-      {
-        "type": "Private Limited Company",
-        "localName": "Ltd / Pty-style company",
-        "requirements": [
-          "Name reservation with companies registry",
-          "Constitution / memorandum & articles",
-          "Director(s) and shareholder particulars + IDs",
-          "Registered office in-country",
-          "Statement of share capital",
-          "Beneficial ownership disclosure where required"
-        ],
-        "costs": [
-          {
-            "item": "Registry filing",
-            "amount": "Approx. low–moderate official fees in SLE",
-            "note": "Confirm current tariff"
-          },
-          {
-            "item": "Professional / agent fees",
-            "amount": "Often several times the official fee",
-            "note": "Market rates"
-          }
-        ],
-        "timeline": "Several days to 3 weeks typical"
-      },
-      {
-        "type": "Business Name / Sole Proprietorship",
-        "localName": "Enterprise",
-        "requirements": [
-          "Business name approval",
-          "Proprietor ID and address",
-          "Nature of business"
-        ],
-        "costs": [
-          {
-            "item": "Registration",
-            "amount": "Lower than company filing (SLE)",
-            "note": "Draft"
-          }
-        ],
-        "timeline": "A few days"
-      }
-    ],
-    "notes": "Draft — verify with Corporate Affairs Commission and local counsel. Fees and document lists change."
-  },
-  {
-    "slug": "somalia",
-    "name": "Somalia",
-    "region": "Africa",
-    "currency": "SOS",
-    "regulator": "Ministry of Commerce / regional registries",
-    "entities": [
-      {
-        "type": "Private Limited Company",
-        "localName": "Ltd / Pty-style company",
-        "requirements": [
-          "Name reservation with companies registry",
-          "Constitution / memorandum & articles",
-          "Director(s) and shareholder particulars + IDs",
-          "Registered office in-country",
-          "Statement of share capital",
-          "Beneficial ownership disclosure where required"
-        ],
-        "costs": [
-          {
-            "item": "Registry filing",
-            "amount": "Approx. low–moderate official fees in SOS",
-            "note": "Confirm current tariff"
-          },
-          {
-            "item": "Professional / agent fees",
-            "amount": "Often several times the official fee",
-            "note": "Market rates"
-          }
-        ],
-        "timeline": "Several days to 3 weeks typical"
-      },
-      {
-        "type": "Business Name / Sole Proprietorship",
-        "localName": "Enterprise",
-        "requirements": [
-          "Business name approval",
-          "Proprietor ID and address",
-          "Nature of business"
-        ],
-        "costs": [
-          {
-            "item": "Registration",
-            "amount": "Lower than company filing (SOS)",
-            "note": "Draft"
-          }
-        ],
-        "timeline": "A few days"
-      }
-    ],
-    "notes": "Draft — verify with Ministry of Commerce / regional registries and local counsel. Fees and document lists change."
-  },
-  {
     "slug": "south-africa",
     "name": "South Africa",
     "region": "Africa",
@@ -2938,110 +802,6 @@ window.COUNTRIES = [
     "notes": "Draft — after CIPC: SARS income tax / VAT as needed, UIF, COIDA, B-BBEE if relevant."
   },
   {
-    "slug": "south-sudan",
-    "name": "South Sudan",
-    "region": "Africa",
-    "currency": "SSP",
-    "regulator": "Ministry of Trade / Business Registry",
-    "entities": [
-      {
-        "type": "Private Limited Company",
-        "localName": "Ltd / Pty-style company",
-        "requirements": [
-          "Name reservation with companies registry",
-          "Constitution / memorandum & articles",
-          "Director(s) and shareholder particulars + IDs",
-          "Registered office in-country",
-          "Statement of share capital",
-          "Beneficial ownership disclosure where required"
-        ],
-        "costs": [
-          {
-            "item": "Registry filing",
-            "amount": "Approx. low–moderate official fees in SSP",
-            "note": "Confirm current tariff"
-          },
-          {
-            "item": "Professional / agent fees",
-            "amount": "Often several times the official fee",
-            "note": "Market rates"
-          }
-        ],
-        "timeline": "Several days to 3 weeks typical"
-      },
-      {
-        "type": "Business Name / Sole Proprietorship",
-        "localName": "Enterprise",
-        "requirements": [
-          "Business name approval",
-          "Proprietor ID and address",
-          "Nature of business"
-        ],
-        "costs": [
-          {
-            "item": "Registration",
-            "amount": "Lower than company filing (SSP)",
-            "note": "Draft"
-          }
-        ],
-        "timeline": "A few days"
-      }
-    ],
-    "notes": "Draft — verify with Ministry of Trade / Business Registry and local counsel. Fees and document lists change."
-  },
-  {
-    "slug": "sudan",
-    "name": "Sudan",
-    "region": "Africa",
-    "currency": "SDG",
-    "regulator": "Commercial Registry",
-    "entities": [
-      {
-        "type": "Private Limited Company",
-        "localName": "Ltd / Pty-style company",
-        "requirements": [
-          "Name reservation with companies registry",
-          "Constitution / memorandum & articles",
-          "Director(s) and shareholder particulars + IDs",
-          "Registered office in-country",
-          "Statement of share capital",
-          "Beneficial ownership disclosure where required"
-        ],
-        "costs": [
-          {
-            "item": "Registry filing",
-            "amount": "Approx. low–moderate official fees in SDG",
-            "note": "Confirm current tariff"
-          },
-          {
-            "item": "Professional / agent fees",
-            "amount": "Often several times the official fee",
-            "note": "Market rates"
-          }
-        ],
-        "timeline": "Several days to 3 weeks typical"
-      },
-      {
-        "type": "Business Name / Sole Proprietorship",
-        "localName": "Enterprise",
-        "requirements": [
-          "Business name approval",
-          "Proprietor ID and address",
-          "Nature of business"
-        ],
-        "costs": [
-          {
-            "item": "Registration",
-            "amount": "Lower than company filing (SDG)",
-            "note": "Draft"
-          }
-        ],
-        "timeline": "A few days"
-      }
-    ],
-    "notes": "Draft — verify with Commercial Registry and local counsel. Fees and document lists change."
-  },
-  {
     "slug": "tanzania",
     "name": "Tanzania",
     "region": "Africa",
@@ -3052,402 +812,75 @@ window.COUNTRIES = [
         "type": "Private Limited Company",
         "localName": "Ltd",
         "requirements": [
-          "Name clearance via BRELA",
-          "Memorandum & Articles",
-          "Directors / shareholders + IDs",
-          "Registered office in Tanzania",
-          "Taxpayer ID (TIN) process alongside or after"
+          "Name clearance via BRELA online portal",
+          "Memorandum & Articles of Association",
+          "Directors and shareholders particulars + IDs / passports",
+          "Registered office in Tanzania (Mainland vs Zanzibar — separate regimes)",
+          "Statement of share capital",
+          "Taxpayer Identification Number (TIN) process with TRA"
         ],
         "costs": [
           {
-            "item": "BRELA filing",
+            "item": "BRELA name search / filing",
             "amount": "≈ TZS 50,000–300,000+",
-            "note": "Confirm BRELA"
+            "note": "Confirm BRELA fee schedule"
           },
           {
-            "item": "Professional fees",
-            "amount": "≈ TZS 200,000–1,000,000",
-            "note": "Market"
+            "item": "Professional / legal fees",
+            "amount": "≈ TZS 200,000–1,500,000",
+            "note": "Market rates"
+          },
+          {
+            "item": "Stamp duty on capital (if applicable)",
+            "amount": "Varies",
+            "note": "Confirm current rules"
           }
         ],
-        "timeline": "About 1–3 weeks"
+        "timeline": "About 1–3 weeks on Mainland when file is complete"
       },
       {
         "type": "Business Name / Sole Proprietorship",
         "localName": "Enterprise",
         "requirements": [
-          "Business name approval",
+          "Business name registration with BRELA",
           "Proprietor ID and address",
-          "Nature of business"
+          "Nature of business",
+          "TIN with TRA"
         ],
         "costs": [
           {
-            "item": "Registration",
-            "amount": "Lower than company filing (TZS)",
+            "item": "BRELA business name fee",
+            "amount": "≈ TZS 20,000–100,000",
             "note": "Draft"
-          }
-        ],
-        "timeline": "A few days"
-      }
-    ],
-    "notes": "Draft — verify with BRELA (Business Registrations and Licensing Agency) and local counsel. Fees and document lists change."
-  },
-  {
-    "slug": "togo",
-    "name": "Togo",
-    "region": "Africa",
-    "currency": "XOF",
-    "regulator": "CFE / RCCM",
-    "entities": [
-      {
-        "type": "Société à Responsabilité Limitée",
-        "localName": "SARL (private limited equivalent)",
-        "requirements": [
-          "Company name and objects",
-          "Statutes (articles) under OHADA Uniform Act",
-          "At least 1 shareholder (confirm local practice)",
-          "Manager (gérant) particulars",
-          "Registered office in the country",
-          "Deposit of share capital in a local bank (rules vary)",
-          "RCCM registration via Guichet Unique / CFE where available",
-          "Notarisation of statutes often required"
-        ],
-        "costs": [
-          {
-            "item": "RCCM / guichet unique fees",
-            "amount": "≈ 25,000–150,000 XOF",
-            "note": "Wide variance by country"
-          },
-          {
-            "item": "Notary / legal fees",
-            "amount": "≈ 100,000–500,000 XOF",
-            "note": "Often the larger cost"
-          },
-          {
-            "item": "Capital deposit",
-            "amount": "Per statutes",
-            "note": "Minimum capital rules eased in many OHADA states — confirm locally"
-          }
-        ],
-        "timeline": "Often 3–21 business days if file is complete"
-      },
-      {
-        "type": "Société Anonyme",
-        "localName": "SA (public limited equivalent)",
-        "requirements": [
-          "Higher governance (board) requirements",
-          "Statutes and capital suited to SA form",
-          "RCCM registration",
-          "Notary involvement typical"
-        ],
-        "costs": [
-          {
-            "item": "Legal + registry package",
-            "amount": "Higher than SARL",
-            "note": "Use local counsel"
-          }
-        ],
-        "timeline": "Several weeks"
-      },
-      {
-        "type": "Entreprise Individuelle",
-        "localName": "Sole trader / business name",
-        "requirements": [
-          "Trader registration / RCCM as applicable",
-          "National ID and address",
-          "Tax identification after registration"
-        ],
-        "costs": [
-          {
-            "item": "Registration",
-            "amount": "≈ 10,000–75,000 XOF",
-            "note": "Draft"
-          }
-        ],
-        "timeline": "A few days to 2 weeks"
-      }
-    ],
-    "notes": "Draft — verify with CFE / RCCM and local counsel. Fees and document lists change."
-  },
-  {
-    "slug": "tunisia",
-    "name": "Tunisia",
-    "region": "Africa",
-    "currency": "TND",
-    "regulator": "RNE (Registre National des Entreprises)",
-    "entities": [
-      {
-        "type": "Société à Responsabilité Limitée (SARL)",
-        "localName": "Private limited equivalent",
-        "requirements": [
-          "Name clearance",
-          "Articles / statutes (often Arabic + French)",
-          "Managers / partners IDs",
-          "Registered office",
-          "Commercial registry filing",
-          "Tax and social registrations after incorporation"
-        ],
-        "costs": [
-          {
-            "item": "Registry + stamp duties",
-            "amount": "Varies (TND)",
-            "note": "Confirm current schedule"
-          },
-          {
-            "item": "Legal / notary",
-            "amount": "Often significant",
-            "note": "Market rates"
-          }
-        ],
-        "timeline": "1–4 weeks"
-      },
-      {
-        "type": "Sole Proprietorship",
-        "localName": "Personne physique / auto-entrepreneur where available",
-        "requirements": [
-          "Trader / auto-entrepreneur registration if applicable",
-          "National ID and tax file"
-        ],
-        "costs": [
-          {
-            "item": "Registration",
-            "amount": "Usually lower (TND)",
-            "note": "Draft"
-          }
-        ],
-        "timeline": "Days to a few weeks"
-      }
-    ],
-    "notes": "Draft — verify with RNE (Registre National des Entreprises) and local counsel. Fees and document lists change."
-  },
-  {
-    "slug": "uganda",
-    "name": "Uganda",
-    "region": "Africa",
-    "currency": "UGX",
-    "regulator": "URSB (Uganda Registration Services Bureau)",
-    "entities": [
-      {
-        "type": "Private Limited Company",
-        "localName": "Ltd",
-        "requirements": [
-          "Name reservation on URSB portal",
-          "Memorandum & Articles",
-          "At least 1 director / shareholder particulars",
-          "Registered address in Uganda",
-          "Forms and ID copies"
-        ],
-        "costs": [
-          {
-            "item": "URSB fees",
-            "amount": "≈ UGX 50,000–250,000+",
-            "note": "Confirm schedule; stamp duty on capital may apply"
           },
           {
             "item": "Professional fees",
-            "amount": "≈ UGX 200,000–1,500,000",
-            "note": "Market"
+            "amount": "≈ TZS 100,000–500,000",
+            "note": "Optional"
           }
         ],
         "timeline": "Several days to 2 weeks"
       },
       {
-        "type": "Business Name / Sole Proprietorship",
-        "localName": "Enterprise",
+        "type": "Branch of Foreign Company",
+        "localName": "Foreign company registration",
         "requirements": [
-          "Business name approval",
-          "Proprietor ID and address",
-          "Nature of business"
+          "Certified parent company documents",
+          "Local representative in Tanzania",
+          "BRELA foreign company forms",
+          "Registered office in Tanzania"
         ],
         "costs": [
           {
-            "item": "Registration",
-            "amount": "Lower than company filing (UGX)",
-            "note": "Draft"
+            "item": "Filing + legal",
+            "amount": "≈ TZS 500,000–2,000,000+",
+            "note": "Complexity-driven"
           }
         ],
-        "timeline": "A few days"
+        "timeline": "2–6 weeks typical"
       }
     ],
-    "notes": "Draft — verify with URSB (Uganda Registration Services Bureau) and local counsel. Fees and document lists change."
-  },
-  {
-    "slug": "zambia",
-    "name": "Zambia",
-    "region": "Africa",
-    "currency": "ZMW",
-    "regulator": "PACRA (Patents and Companies Registration Agency)",
-    "entities": [
-      {
-        "type": "Private Limited Company",
-        "localName": "Ltd",
-        "requirements": [
-          "Name clearance via PACRA",
-          "Incorporation forms and articles",
-          "Directors / shareholders IDs",
-          "Registered office in Zambia"
-        ],
-        "costs": [
-          {
-            "item": "PACRA fees",
-            "amount": "≈ ZMW 300–2,000+",
-            "note": "May relate to capital"
-          },
-          {
-            "item": "Professional fees",
-            "amount": "≈ ZMW 1,500–8,000",
-            "note": "Market"
-          }
-        ],
-        "timeline": "About 1–2 weeks"
-      },
-      {
-        "type": "Business Name / Sole Proprietorship",
-        "localName": "Enterprise",
-        "requirements": [
-          "Business name approval",
-          "Proprietor ID and address",
-          "Nature of business"
-        ],
-        "costs": [
-          {
-            "item": "Registration",
-            "amount": "Lower than company filing (ZMW)",
-            "note": "Draft"
-          }
-        ],
-        "timeline": "A few days"
-      }
-    ],
-    "notes": "Draft — verify with PACRA (Patents and Companies Registration Agency) and local counsel. Fees and document lists change."
-  },
-  {
-    "slug": "zimbabwe",
-    "name": "Zimbabwe",
-    "region": "Africa",
-    "currency": "USD",
-    "regulator": "Companies and Intellectual Property Office (CIPO/CR)",
-    "entities": [
-      {
-        "type": "Private Limited Company",
-        "localName": "Private company",
-        "requirements": [
-          "Name search with companies office",
-          "Memorandum & Articles",
-          "Directors / shareholders details",
-          "Registered office"
-        ],
-        "costs": [
-          {
-            "item": "Registry fees",
-            "amount": "Often quoted in USD",
-            "note": "Confirm CIPO current tariffs"
-          },
-          {
-            "item": "Professional fees",
-            "amount": "USD 100–500+",
-            "note": "Market"
-          }
-        ],
-        "timeline": "1–3 weeks"
-      },
-      {
-        "type": "Business Name / Sole Proprietorship",
-        "localName": "Enterprise",
-        "requirements": [
-          "Business name approval",
-          "Proprietor ID and address",
-          "Nature of business"
-        ],
-        "costs": [
-          {
-            "item": "Registration",
-            "amount": "Lower than company filing (USD)",
-            "note": "Draft"
-          }
-        ],
-        "timeline": "A few days"
-      }
-    ],
-    "notes": "Draft — verify with Companies and Intellectual Property Office (CIPO/CR) and local counsel. Fees and document lists change."
-  },
-  {
-    "slug": "canada",
-    "name": "Canada",
-    "region": "North America",
-    "currency": "CAD",
-    "regulator": "Corporations Canada (federal) / provincial registries",
-    "entities": [
-      {
-        "type": "Federal Corporation",
-        "localName": "Canada Business Corporations Act (CBCA)",
-        "requirements": [
-          "NUANS name search (or numbered company)",
-          "Articles of Incorporation",
-          "At least 1 director (25% Canadian resident rule may apply — confirm current CBCA)",
-          "Registered office in Canada",
-          "Individuals with significant control (ISC) register"
-        ],
-        "costs": [
-          {
-            "item": "Corporations Canada filing",
-            "amount": "≈ CAD 200 (online) / 250+ paper",
-            "note": "Confirm current fees"
-          },
-          {
-            "item": "NUANS search",
-            "amount": "≈ CAD 20–50",
-            "note": "If named corp"
-          },
-          {
-            "item": "Legal / registered agent extras",
-            "amount": "≈ CAD 300–1,500+",
-            "note": "Optional packages"
-          }
-        ],
-        "timeline": "Often same day online"
-      },
-      {
-        "type": "Provincial / Territorial Corporation",
-        "localName": "e.g. Ontario, BC, Alberta corp",
-        "requirements": [
-          "Articles under provincial statute",
-          "Name search rules vary by province",
-          "Director / address requirements per province",
-          "Extra-provincial registration if operating in other provinces"
-        ],
-        "costs": [
-          {
-            "item": "Provincial filing",
-            "amount": "≈ CAD 100–400",
-            "note": "Varies by province"
-          },
-          {
-            "item": "Professional fees",
-            "amount": "≈ CAD 300–2,000",
-            "note": "Market rates"
-          }
-        ],
-        "timeline": "Same day to a few days"
-      },
-      {
-        "type": "Sole Proprietorship",
-        "localName": "Business name registration",
-        "requirements": [
-          "May register trade name with province if not using legal name",
-          "Business number / CRA tax accounts as needed"
-        ],
-        "costs": [
-          {
-            "item": "Provincial name registration",
-            "amount": "≈ CAD 0–100+",
-            "note": "Province-specific"
-          }
-        ],
-        "timeline": "Same day to a week"
-      }
-    ],
-    "notes": "Draft — federal vs provincial choice depends on brand and where you operate. CRA business number after incorporation."
+    "notes": "Draft — Mainland BRELA vs Zanzibar BPRA are different. Post-incorporation: TRA TIN, business licence, sector permits (e.g. mining, tourism)."
   },
   {
     "slug": "united-states",
@@ -3532,5 +965,158 @@ window.COUNTRIES = [
       }
     ],
     "notes": "Draft — US formation is state-driven. Budget for registered agent, annual reports, and possible sales-tax / foreign qualification."
+  },
+  {
+    "slug": "zambia",
+    "name": "Zambia",
+    "region": "Africa",
+    "currency": "ZMW",
+    "regulator": "PACRA (Patents and Companies Registration Agency)",
+    "entities": [
+      {
+        "type": "Private Limited Company",
+        "localName": "Ltd",
+        "requirements": [
+          "Name clearance via PACRA",
+          "Incorporation forms and articles / constitution",
+          "At least 1 director and shareholders (confirm Companies Act minima)",
+          "Registered office in Zambia",
+          "ID / passport copies and residential addresses",
+          "Beneficial ownership disclosure where required"
+        ],
+        "costs": [
+          {
+            "item": "PACRA name search",
+            "amount": "≈ ZMW 50–200",
+            "note": "Confirm PACRA"
+          },
+          {
+            "item": "Incorporation fees",
+            "amount": "≈ ZMW 300–2,000+",
+            "note": "May relate to share capital"
+          },
+          {
+            "item": "Professional fees",
+            "amount": "≈ ZMW 1,500–10,000",
+            "note": "Market rates"
+          }
+        ],
+        "timeline": "About 1–2 weeks typical"
+      },
+      {
+        "type": "Business Name",
+        "localName": "Sole trader / enterprise",
+        "requirements": [
+          "Business name application at PACRA",
+          "Proprietor particulars and ID",
+          "Nature of business and address"
+        ],
+        "costs": [
+          {
+            "item": "PACRA business name fee",
+            "amount": "≈ ZMW 100–500",
+            "note": "Draft"
+          },
+          {
+            "item": "Professional fees",
+            "amount": "≈ ZMW 500–3,000",
+            "note": "Optional"
+          }
+        ],
+        "timeline": "A few days to 1 week"
+      },
+      {
+        "type": "Public Limited Company",
+        "localName": "Plc",
+        "requirements": [
+          "Higher disclosure and capital expectations than private Ltd",
+          "PACRA public company filings",
+          "Additional regulatory steps if listing later"
+        ],
+        "costs": [
+          {
+            "item": "PACRA + professional",
+            "amount": "Higher than private Ltd",
+            "note": "Use counsel"
+          }
+        ],
+        "timeline": "Several weeks"
+      }
+    ],
+    "notes": "Draft — after PACRA: ZRA taxpayer registration, NAPSA/NHIMA for employees, sector licences as needed."
+  },
+  {
+    "slug": "zimbabwe",
+    "name": "Zimbabwe",
+    "region": "Africa",
+    "currency": "USD",
+    "regulator": "Companies and Intellectual Property Office (CIPO/CR)",
+    "entities": [
+      {
+        "type": "Private Limited Company",
+        "localName": "Private company",
+        "requirements": [
+          "Name search with Companies and Intellectual Property Office",
+          "Memorandum & Articles of Association",
+          "Directors and shareholders particulars",
+          "Registered office in Zimbabwe",
+          "ID / passport copies",
+          "Forms prescribed under Companies and Other Business Entities Act"
+        ],
+        "costs": [
+          {
+            "item": "Name search / reservation",
+            "amount": "Often USD-denominated",
+            "note": "Confirm CIPO tariff (fees frequently quoted in USD)"
+          },
+          {
+            "item": "Incorporation filing",
+            "amount": "≈ USD 50–200+",
+            "note": "Draft — verify current schedule"
+          },
+          {
+            "item": "Professional / legal fees",
+            "amount": "≈ USD 150–600+",
+            "note": "Market rates"
+          }
+        ],
+        "timeline": "Often 1–3 weeks"
+      },
+      {
+        "type": "Private Business Corporation",
+        "localName": "PBC",
+        "requirements": [
+          "Simpler small-business vehicle under local law",
+          "Members and founding documents as prescribed",
+          "Registered office particulars"
+        ],
+        "costs": [
+          {
+            "item": "Registry + professional",
+            "amount": "Often lower than private company",
+            "note": "Confirm CIPO"
+          }
+        ],
+        "timeline": "About 1–2 weeks"
+      },
+      {
+        "type": "Public Limited Company",
+        "localName": "Public company",
+        "requirements": [
+          "Higher capital / disclosure requirements",
+          "CIPO public company filings",
+          "Possible ZSE steps if listing later"
+        ],
+        "costs": [
+          {
+            "item": "Filing + legal",
+            "amount": "Higher than private company",
+            "note": "Use counsel"
+          }
+        ],
+        "timeline": "Several weeks"
+      }
+    ],
+    "notes": "Draft — fees and FX practice change often; many practitioners quote in USD. Post-incorporation: ZIMRA tax, NSSA, sector licences."
   }
 ];
