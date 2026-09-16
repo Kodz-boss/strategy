@@ -225,53 +225,106 @@ const RICH = {
   Kenya: {
     entities: [
       {
-        type: "Private Limited Company",
-        localName: "Ltd",
+        type: "Kenyan Subsidiary",
+        localName: "Private Limited Company (Ltd)",
         requirements: [
-          "Name search / reservation on eCitizen / BRS",
-          "Memorandum & Articles (or model articles)",
-          "At least 1 director and 1 shareholder (can be same person)",
-          "Registered office in Kenya",
-          "IDs / KRA PINs for directors and shareholders",
-          "Statement of nominal capital",
-          "Beneficial ownership information",
+          "Signed Memorandum of Association and Articles of Association",
+          "At least one director who is a natural person ordinarily resident in Kenya (foreign/Nigerian client often cannot fill this alone — local nominee may be needed)",
+          "At least one shareholder",
+          "Registered office address in Kenya",
         ],
         costs: [
-          { item: "Name reservation", amount: "≈ KES 100–1,000", note: "Confirm eCitizen" },
-          { item: "Incorporation fee", amount: "≈ KES 10,000–40,000", note: "May scale with capital" },
-          { item: "Professional fees", amount: "≈ KES 15,000–80,000", note: "Market rates" },
+          {
+            item: "Preliminary advisory (branch vs subsidiary, operating model, regulatory)",
+            amount: "Professional KES 40,000 · Gov N/A",
+            note: "Deliverable: Legal and Tax Advisory Memo",
+          },
+          {
+            item: "Registration of the legal entity",
+            amount: "Gov KES 10,500 · Professional KES 70,000",
+            note: "Deliverable: Certificate of incorporation and CR12",
+          },
+          {
+            item: "KRA PIN registration",
+            amount: "Professional KES 20,000 · Gov N/A",
+            note: "Deliverable: KRA PIN Certificate",
+          },
+          {
+            item: "Social security + business permit",
+            amount: "Gov KES 8,000 · Professional KES 60,000",
+            note: "Deliverable: NSSF and SHA registration certificates; Business Permit",
+          },
+          {
+            item: "Total government filing fees (if all lines)",
+            amount: "KES 18,500",
+            note: "10,500 + 8,000 from local counsel quote",
+          },
+          {
+            item: "Total professional fees (if all lines)",
+            amount: "KES 190,000",
+            note: "40,000 + 70,000 + 20,000 + 60,000",
+          },
+          {
+            item: "Combined package (if all lines)",
+            amount: "KES 208,500",
+            note: "Government + professional; refine once timeline/support confirmed",
+          },
         ],
-        timeline: "Often 1–7 business days online",
+        timeline: "Refine with counsel once anticipated timeline and support level are confirmed",
       },
       {
-        type: "Sole Proprietorship",
-        localName: "Business name",
+        type: "Branch of Foreign Company",
+        localName: "Kenya branch / foreign company registration",
         requirements: [
-          "Business name reservation",
-          "Proprietor ID and KRA PIN",
-          "Nature of business and address",
+          "Certified copy of the current certificate of incorporation or registration of the foreign company in its country of origin (e.g. Nigeria CAC), or equivalent",
+          "The company's memorandum and articles of association",
+          "Information concerning the company's directors and secretary including passport or ID numbers, passport photos, residential address, and postal address",
+          "Details of the company's local representative(s) in Kenya",
+          "Information concerning the company's place(s) of business in Kenya",
+          "The company's proposed name for conducting business in Kenya",
         ],
         costs: [
-          { item: "Registration", amount: "≈ KES 1,000–5,000", note: "Draft" },
+          {
+            item: "Preliminary advisory (branch vs subsidiary, operating model, regulatory)",
+            amount: "Professional KES 40,000 · Gov N/A",
+            note: "Deliverable: Legal and Tax Advisory Memo",
+          },
+          {
+            item: "Registration of the legal entity",
+            amount: "Gov KES 10,500 · Professional KES 70,000",
+            note: "Deliverable: Certificate of incorporation and CR12 (or branch registration equivalents as applicable)",
+          },
+          {
+            item: "KRA PIN registration",
+            amount: "Professional KES 20,000 · Gov N/A",
+            note: "Deliverable: KRA PIN Certificate",
+          },
+          {
+            item: "Social security + business permit",
+            amount: "Gov KES 8,000 · Professional KES 60,000",
+            note: "Deliverable: NSSF and SHA registration certificates; Business Permit",
+          },
+          {
+            item: "Total government filing fees (if all lines)",
+            amount: "KES 18,500",
+            note: "From local counsel quote",
+          },
+          {
+            item: "Total professional fees (if all lines)",
+            amount: "KES 190,000",
+            note: "From local counsel quote",
+          },
+          {
+            item: "Combined package (if all lines)",
+            amount: "KES 208,500",
+            note: "Quote covers establishing presence; refine by structure once confirmed",
+          },
         ],
-        timeline: "A few days",
-      },
-      {
-        type: "Foreign Branch / Company",
-        localName: "Branch of foreign company",
-        requirements: [
-          "Certified constitutional documents of parent",
-          "Local representative",
-          "Registered office in Kenya",
-          "BRS foreign company registration forms",
-        ],
-        costs: [
-          { item: "Filing + legal", amount: "≈ KES 50,000–200,000+", note: "Depends on complexity" },
-        ],
-        timeline: "2–6 weeks typical",
+        timeline: "Refine with counsel once anticipated timeline and support level are confirmed",
       },
     ],
-    notes: "Draft — post-incorporation: KRA obligations, county business permits, NSSF/NHIF for employees.",
+    notes:
+      "Verified local notes. A foreign company can set up in Kenya as a subsidiary or a branch — counsel advises on structure first. Professional fees are separate from government filing fees. Fee quote may be refined once timeline and level of support are clearer. Package lines already include KRA PIN, NSSF/SHA, and business permit assistance.",
   },
 
   "South Africa": {
