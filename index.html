@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Country Requirements Knowledge Base</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="page">
+    <header class="site-header">
+      <p class="eyebrow">Personal reference</p>
+      <h1>Country Requirements</h1>
+      <p class="lede">
+        Draft incorporation notes for African countries plus Canada and the United States —
+        entity types, requirements, and approximate costs. Verify before you rely on them.
+      </p>
+    </header>
+
+    <div class="disclaimer" role="note">
+      <strong>Draft estimates.</strong> Fees and document lists change. Treat every entry as a starting point to verify with the local registrar or counsel.
+    </div>
+
+    <div class="toolbar">
+      <label class="search-wrap">
+        <span class="visually-hidden">Search countries</span>
+        <input type="search" id="search" placeholder="Search country, regulator, or entity…" autocomplete="off" />
+      </label>
+      <div class="filters" id="letter-filters" aria-label="Filter by letter"></div>
+      <div class="meta-row">
+        <span id="result-count"></span>
+        <div class="region-toggles">
+          <button type="button" class="chip active" data-region="all">All</button>
+          <button type="button" class="chip" data-region="Africa">Africa</button>
+          <button type="button" class="chip" data-region="North America">North America</button>
+        </div>
+      </div>
+    </div>
+
+    <main>
+      <div class="country-grid" id="country-grid"></div>
+      <p class="empty-state" id="empty-state" hidden>No countries match that filter.</p>
+    </main>
+
+    <footer class="site-footer">
+      <p>Edit content in <code>js/data.js</code> · Open <code>index.html</code> in a browser</p>
+    </footer>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => initIndex());
+  </script>
+</body>
+</html>
